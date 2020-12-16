@@ -3,8 +3,8 @@ const bcrypt = require('bcrypt');
 const LocalStrategy = require('passport-local');
 const ObjectID = require('mongodb').ObjectID;
 
-const localStrategy = (err, user) => {
-  console.log(username + ' attempted to log in.');
+const localStrategy = (err, user, password, done) => {
+  console.log(email + ' attempted to log in.');
   if (err) {
     return done(err);
   }
@@ -21,14 +21,14 @@ module.exports = () => {
   passport.use(
     'clientLocal',
     new LocalStrategy((email, password, done) => {
-      Client.findOne({ email }, localStrategy);
+      Client.findOne({ email }, localStrategy(err, user, password, done));
     })
   );
 
   passport.use(
     'providerLocal',
     new LocalStrategy((email, password, done) => {
-      Provider.findOne({ email }, localStrategy);
+      Provider.findOne({ email }, localStrategy(err, user, password, done));
     })
   );
 
