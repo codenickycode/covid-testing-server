@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
+const bcrypt = require('bcrypt');
+const ensureAuthenticated = require('./tools/ensureAuthenticated.js');
 const { ObjectId } = require('mongodb');
 const createTruthyObject = require('../tools/createTruthyObject.js');
 const Client = require('../models/Client.model.js');
@@ -14,7 +17,9 @@ router.route('/locations').get((req, res) => {
 
 // add client to db with email and password
 router.route('/register').post((req, res) => {
-  const newClient = new Client(req.body);
+  const { email, password } = req.body;
+  const hash = bcrypt.hashSync(password, 12);
+  const newClient = new Client({ email, password: hash });
   Client.findOne({ email: newClient.email })
     .then((client) => {
       if (client) {
@@ -22,31 +27,24 @@ router.route('/register').post((req, res) => {
       } else {
         newClient
           .save()
-          .then(() => res.send('success'))
+          .then(passport.authenticate('clientLocal'), (req, res, next) => {
+            res.send('success');
+          })
           .catch((err) => res.status(400).json(err));
       }
     })
     .catch((err) => res.status(400).json(err));
 });
 
-// find client in db and return client info
-router.route('/login').post((req, res) => {
-  const { email, password } = req.body;
-  Client.findOne({ email })
-    .then((client) => {
-      if (!client) {
-        return res.send('invalid email');
-      } else if (password !== client.password) {
-        return res.send('invalid password');
-      } else {
-        return res.json(client);
-      }
-    })
-    .catch((err) => res.status(400).json(err));
-});
+// login
+router
+  .route('/login')
+  .post(passport.authenticate('clientLocal'), (req, res, next) => {
+    res.send('success');
+  });
 
 // add an appointment
-router.route('/appointments').post(async (req, res) => {
+router.route('/appointments').post(ensureAuthenticated, async (req, res) => {
   const { client, name, dob, phone, date, time, location, test } = req.body;
   const dbLocation = await Location.findById(location, {}, (err) => {
     if (err) return res.send('location not found');
@@ -92,7 +90,7 @@ router.route('/appointments').post(async (req, res) => {
     .catch((err) => res.status(400).send(err));
 });
 
-router.route('/appointments').get(async (req, res) => {
+router.route('/appointments').get(ensureAuthenticated, async (req, res) => {
   const client = req.body.client;
   const clientDoc = await Client.findById(client, {}, (err) => {
     if (err) return res.status(400).send('client not found');
@@ -100,7 +98,7 @@ router.route('/appointments').get(async (req, res) => {
   return res.json(clientDoc.appointments);
 });
 
-router.route('/appointments').delete(async (req, res) => {
+router.route('/appointments').delete(ensureAuthenticated, async (req, res) => {
   const { client, location, confirmation } = req.body;
   if (!client || !location || !confirmation)
     return res.status(400).send('required fields missing');
@@ -133,7 +131,7 @@ router.route('/appointments').delete(async (req, res) => {
     .catch((err) => res.status(400).send(err));
 });
 
-router.route('/update/:type').post(async (req, res) => {
+router.route('/update/:type').post(ensureAuthenticated, async (req, res) => {
   const type = req.params.type;
   let request = createTruthyObject(req.body);
   if (!request.client) return res.send('must provide client id');
@@ -168,7 +166,7 @@ router.route('/update/:type').post(async (req, res) => {
     .catch((err) => res.status(400).json(err));
 });
 
-router.route('/').get((req, res) => {
+router.route('/').get(ensureAuthenticated, (req, res) => {
   let client = req.body.client;
   console.log(client);
   Client.findById(client, {}, (err) => {
@@ -177,6 +175,15 @@ router.route('/').get((req, res) => {
       return res.status(400).send('client not found');
     }
   }).then((client) => res.json(client));
+});
+
+app.route('/logout').get((req, res) => {
+  req.logout();
+  res.redirect('/');
+});
+
+app.use((req, res, next) => {
+  res.status(404).type('text').send('Not Found');
 });
 
 module.exports = router;
