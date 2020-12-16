@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const bcrypt = require('bcrypt');
-const ensureAuthenticated = require('./tools/ensureAuthenticated.js');
+const ensureAuthenticated = require('../tools/ensureAuthenticated.js');
 const { ObjectId } = require('mongodb');
 const createTruthyObject = require('../tools/createTruthyObject');
 const Location = require('../models/Location.model.js');
@@ -98,12 +98,12 @@ router
 
 // delete appointment
 
-app.route('/logout').get((req, res) => {
+router.route('/logout').get((req, res) => {
   req.logout();
   res.redirect('/');
 });
 
-app.use((req, res, next) => {
+router.use((req, res, next) => {
   res.status(404).type('text').send('Not Found');
 });
 

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const bcrypt = require('bcrypt');
-const ensureAuthenticated = require('./tools/ensureAuthenticated.js');
+const ensureAuthenticated = require('../tools/ensureAuthenticated.js');
 const { ObjectId } = require('mongodb');
 const createTruthyObject = require('../tools/createTruthyObject.js');
 const Client = require('../models/Client.model.js');
@@ -27,13 +27,19 @@ router.route('/register').post((req, res) => {
       } else {
         newClient
           .save()
-          .then(passport.authenticate('clientLocal'), (req, res, next) => {
-            res.send('success');
+          .then((user) => {
+            req.login(user, (err) => {
+              if (!err) {
+                return res.send('success');
+              } else {
+                return res.status(400).send('post-register login error');
+              }
+            });
           })
-          .catch((err) => res.status(400).json(err));
+          .catch((err) => res.status(400).send('post-save error'));
       }
     })
-    .catch((err) => res.status(400).json(err));
+    .catch((err) => res.status(400).send('find error'));
 });
 
 // login
@@ -177,12 +183,12 @@ router.route('/').get(ensureAuthenticated, (req, res) => {
   }).then((client) => res.json(client));
 });
 
-app.route('/logout').get((req, res) => {
+router.route('/logout').get((req, res) => {
   req.logout();
   res.redirect('/');
 });
 
-app.use((req, res, next) => {
+router.use((req, res, next) => {
   res.status(404).type('text').send('Not Found');
 });
 

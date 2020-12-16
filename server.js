@@ -24,15 +24,16 @@ app.use(passport.session());
 
 // connect to db
 mongoose
-  .connect(
-    process.env.DB_URI,
-    { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true },
-    () => {
-      auth();
-      console.log('Connected to database.');
-    }
-  )
-  .catch((e) => console.log('Unabled to connect to database.'));
+  .connect(process.env.DB_URI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+  })
+  .then(() => {
+    auth();
+    console.log('Connected to database.');
+  })
+  .catch((e) => console.log(e));
 
 // routes
 const clientRouter = require('./routes/client.js');
