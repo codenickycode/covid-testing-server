@@ -1,57 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
-const bcrypt = require('bcrypt');
 const ensureAuthenticated = require('../tools/ensureAuthenticated.js');
-const { ObjectId } = require('mongodb');
 const createTruthyObject = require('../tools/createTruthyObject');
+const User = require('../models/User.model.js');
 const Location = require('../models/Location.model.js');
-const Provider = require('../models/Provider.model.js');
 
-// return all locations
-router.route('/locations').get((req, res) => {
-  Location.find()
-    .then((locations) => res.json(locations))
+// return all Users
+router.route('/users').get((req, res) => {
+  if (req.user.role !== 'provider') return res.status(403).send('unauthorized');
+  User.find()
+    .then((users) => res.json(users))
     .catch((err) => res.status(400).json(err));
 });
-
-// add provider to db with email and password
-router.route('/register').post((req, res) => {
-  const { email, password } = req.body;
-  const hash = bcrypt.hashSync(password, 12);
-  const newProvider = new Provider({ email, password: hash });
-  Provider.findOne({ email: newProvider.email })
-    .then((provider) => {
-      if (provider) {
-        return res.send(false);
-      } else {
-        newProvider
-          .save()
-          .then(passport.authenticate('providerLocal'), (req, res, next) => {
-            res.send('success');
-          })
-          .catch((err) => res.status(400).json(err));
-      }
-    })
-    .catch((err) => res.status(400).json(err));
-});
-
-// login
-router
-  .route('/login')
-  .post(passport.authenticate('providerLocal'), (req, res, next) => {
-    res.send('success');
-  });
 
 // add a location
 router.route('/locations/new').post(ensureAuthenticated, (req, res) => {
-  const newObj = createTruthyObject(req.body);
-  if (!username) return res.status(403).send('unauthorized');
-  delete newObj.username;
-  newLocation = new Location(newObj);
+  if (req.user.role !== 'provider') return res.status(403).send('unauthorized');
+  // create new location with only included fields
+  const location = createTruthyObject(req.body);
+  // create new document
+  newLocation = new Location(location);
+  // save it
   newLocation
     .save()
-    .then((location) => res.json(location))
+    .then((dbLocation) => res.json(dbLocation))
     .catch((err) => res.status(400).json(err));
 });
 
@@ -59,17 +31,25 @@ router.route('/locations/new').post(ensureAuthenticated, (req, res) => {
 router
   .route('/locations/update/:type')
   .post(ensureAuthenticated, async (req, res) => {
+    if (req.user.role !== 'provider')
+      return res.status(403).send('unauthorized');
+    // parse request
     const type = req.params.type;
+    // create new request with only included fields
     let request = createTruthyObject(req.body);
-    if (!request.username) return res.status(403).send('unauthorized');
+    // must include location to update
     if (!request.location) return res.status(400).send('must specify location');
-    ['username', 'location'].forEach((k) => delete request[k]);
+    // no need to add location _id to document
+    delete request.location;
+    // find location
     const dbLocation = await Location.findById(req.body.location, (err) => {
       if (err) return res.status(400).send('location not found');
     });
+    // update location document based on type of request
     switch (type) {
       case 'basic':
         for (let [key, val] of Object.entries(request)) {
+          // only add value if included in request
           if (val) dbLocation[key] = val;
         }
         break;
@@ -82,29 +62,11 @@ router
       default:
         return res.status(400).send('invalid update');
     }
+    // save updated location document
     dbLocation
       .save()
       .then((location) => res.json(location))
       .catch((err) => res.status(400).json(err));
   });
-
-// get user(s)
-
-// get appointments
-
-// add appointment
-
-// update appointment
-
-// delete appointment
-
-router.route('/logout').get((req, res) => {
-  req.logout();
-  res.redirect('/');
-});
-
-router.use((req, res, next) => {
-  res.status(404).type('text').send('Not Found');
-});
 
 module.exports = router;

@@ -5,8 +5,22 @@ const bcrypt = require('bcrypt');
 const { ObjectId } = require('mongodb');
 const ensureAuthenticated = require('../tools/ensureAuthenticated.js');
 const createTruthyObject = require('../tools/createTruthyObject.js');
-const Client = require('../models/Client.model.js');
+const User = require('../models/User.model.js');
 const Location = require('../models/Location.model.js');
+
+// user login
+router
+  .route('/login')
+  .post(passport.authenticate('local'), (req, res, next) => {
+    res.send('success');
+  });
+
+// user logout *** where does this go???
+router.route('/logout').get((req, res) => {
+  console.log('fix this redirect');
+  req.logout();
+  res.redirect('/'); // ???
+});
 
 // return all locations
 router.route('/locations').get((req, res) => {
@@ -15,27 +29,27 @@ router.route('/locations').get((req, res) => {
     .catch((err) => res.status(400).json(err));
 });
 
-// register new client
+// register new user
 router.route('/register').post((req, res) => {
   // parse request
-  const { email, password } = req.body;
-  // hash client password
+  const { email, password, role } = req.body;
+  // hash password
   const hash = bcrypt.hashSync(password, 12);
-  // create new client from Client Schema
-  const newClient = new Client({ email, password: hash });
-  // check if client already registered
-  Client.findOne({ email: newClient.email })
-    .then((client) => {
+  // create new user
+  newUser = new User({ role, email, password: hash });
+  // check if user already registered
+  User.findOne({ email: newUser.email })
+    .then((user) => {
       // if email exists, return false
-      if (client) {
+      if (user) {
         return res.send(false);
       } else {
-        // save new client to db
-        newClient
+        // save new user to db
+        newUser
           .save()
-          .then((user) => {
-            // login client to session
-            req.login(user, (err) => {
+          .then((dbUser) => {
+            // login user to session
+            req.login(dbUser, (err) => {
               if (!err) {
                 return res.send('success');
               } else {
@@ -43,18 +57,11 @@ router.route('/register').post((req, res) => {
               }
             });
           })
-          .catch((err) => res.status(400).send('post-save error'));
+          .catch((err) => res.status(400).send(err));
       }
     })
-    .catch((err) => res.status(400).send('find error'));
+    .catch((err) => res.status(400).send('register find error'));
 });
-
-// client login
-router
-  .route('/login')
-  .post(passport.authenticate('clientLocal'), (req, res, next) => {
-    res.send('success');
-  });
 
 // add an appointment
 router.route('/appointments').post(ensureAuthenticated, async (req, res) => {
@@ -99,7 +106,7 @@ router.route('/appointments').post(ensureAuthenticated, async (req, res) => {
         confirmation: _id,
       };
       // find client
-      let dbClient = await Client.findById(client, {}, (err) => {
+      let dbClient = await User.findById(client, {}, (err) => {
         if (err) return res.status(400).send('client not found');
       });
       // add appointment to client's appointments array
@@ -117,7 +124,7 @@ router.route('/appointments').get(ensureAuthenticated, async (req, res) => {
   // parse request
   const client = req.body.client;
   // find client
-  const clientDoc = await Client.findById(client, {}, (err) => {
+  const clientDoc = await User.findById(client, {}, (err) => {
     if (err) return res.status(400).send('client not found');
   });
   // return client appointments array
@@ -151,7 +158,7 @@ router.route('/appointments').delete(ensureAuthenticated, async (req, res) => {
     .save()
     .then(async () => {
       // find client
-      let dbClient = await Client.findById(client, {}, (err) => {
+      let dbClient = await User.findById(client, {}, (err) => {
         if (err) return res.status(400).send('client not found');
       });
       // now look for appointment in client's appointments array
@@ -176,10 +183,10 @@ router.route('/update/:type').post(ensureAuthenticated, async (req, res) => {
   // parse request, include only values to be updated
   let request = createTruthyObject(req.body);
   if (!request.client) return res.send('must provide client id');
-  // no need to add client field to db
+  // no need to add client _id field to db
   delete request.client;
   // find client
-  let dbClient = await Client.findById(req.body.client, (err) => {
+  let dbClient = await User.findById(req.body.client, (err) => {
     if (err) return res.status(400).send('location not found');
   });
   // check type of update
@@ -218,16 +225,9 @@ router.route('/').get(ensureAuthenticated, (req, res) => {
   // parse request
   let client = req.body.client;
   // find client
-  Client.findById(client, {}, (err) => {
+  User.findById(client, {}, (err) => {
     if (err) return res.status(400).send('client not found');
   }).then((client) => res.json(client));
-});
-
-// client logout *** where does this go???
-router.route('/logout').get((req, res) => {
-  console.log('trying');
-  req.logout();
-  res.redirect('/'); // ???
 });
 
 // catch all invalid endpoints

@@ -16,7 +16,7 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true,
-    cookie: { secure: false },
+    cookie: { secure: false, expires: 300000 },
   })
 );
 app.use(passport.initialize());
@@ -36,8 +36,8 @@ mongoose
   .catch((e) => console.log(e));
 
 // routes
-const clientRouter = require('./routes/client.js');
-app.use('/client', clientRouter);
+const commonRouter = require('./routes/common.js');
+app.use('/common', commonRouter);
 const providerRouter = require('./routes/provider.js');
 app.use('/provider', providerRouter);
 
