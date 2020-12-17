@@ -25,12 +25,12 @@ app.use(passport.session());
 // connect to db
 mongoose
   .connect(process.env.DB_URI, {
-    useUnifiedTopology: true,
+    useUnifiedTopology: true, // fix deprecated mongo stuff
     useNewUrlParser: true,
     useCreateIndex: true,
   })
   .then(() => {
-    auth();
+    auth(); // passport authentication
     console.log('Connected to database.');
   })
   .catch((e) => console.log(e));
@@ -41,6 +41,7 @@ app.use('/client', clientRouter);
 const providerRouter = require('./routes/provider.js');
 app.use('/provider', providerRouter);
 
+// start
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log('Server is running on port: ', port);
