@@ -203,8 +203,8 @@ router.route('/update/:type').post(ensureAuthenticated, async (req, res) => {
       dbClient[type] = Object.assign({}, dbClient[type], request);
       break;
     case 'password':
-      // obviously a lot more than this;
-      dbClient.password = request.password;
+      const hash = bcrypt.hashSync(request.password, 12);
+      dbClient.password = hash;
       break;
     case 'travel':
       // add new travel history at front
