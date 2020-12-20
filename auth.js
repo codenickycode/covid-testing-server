@@ -1,3 +1,4 @@
+const logger = require('./logger');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 const LocalStrategy = require('passport-local');
@@ -10,7 +11,7 @@ module.exports = () => {
     'local',
     new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
       User.findOne({ email }, (err, user) => {
-        console.log(email + ' attempted to log in.');
+        logger.info(email + ' attempted to log in.');
         if (err) {
           return done(err);
         }
@@ -30,8 +31,8 @@ module.exports = () => {
   });
 
   passport.deserializeUser((req, id, done) => {
-    User.findOne({ _id: new ObjectID(id) }, (err, doc) => {
-      if (err) console.log(err);
+    User.findOne({ _id: new ObjectID(id) }, (e, doc) => {
+      if (e) logger.error(e.message);
       done(null, doc);
     });
   });

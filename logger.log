@@ -1,0 +1,740 @@
+2020-12-19T18:06:31.708Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:06:32.640Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:18:34.560Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:18:35.564Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:18:42.049Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:18:43.519Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:25:46.528Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:25:47.300Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:27:31.690Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:27:32.711Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:27:37.172Z [32minfo[39m: 	registerNewUser => [object Object]
+2020-12-19T18:28:21.037Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:28:21.926Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:28:23.833Z [32minfo[39m: 	registerNewUser => [object Object]
+2020-12-19T18:28:23.834Z [32minfo[39m: 	undefined
+2020-12-19T18:28:48.903Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:28:49.971Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:28:51.506Z [32minfo[39m: 	registerNewUser => [object Object]
+2020-12-19T18:28:51.508Z [32minfo[39m: 	undefined
+2020-12-19T18:33:12.580Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:33:13.363Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:33:18.909Z [32minfo[39m: 	registerNewUser => [object Object]
+2020-12-19T18:33:18.911Z [32minfo[39m: 	undefined
+2020-12-19T18:34:14.427Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:34:15.072Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:34:18.070Z [32minfo[39m: 	registerNewUser => [object Object]
+2020-12-19T18:34:18.072Z [32minfo[39m: 	undefined
+2020-12-19T18:34:42.820Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:34:43.448Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:34:56.626Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:34:57.465Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:34:59.980Z [32minfo[39m: 	registerNewUser => [object Object]
+2020-12-19T18:34:59.981Z [32minfo[39m: 	undefined
+2020-12-19T18:35:28.983Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:35:29.578Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:35:40.603Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:35:41.623Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:35:43.067Z [32minfo[39m: 	registerNewUser => [object Object]
+2020-12-19T18:35:43.069Z [32minfo[39m: 	undefined
+2020-12-19T18:36:42.744Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:36:44.442Z [32minfo[39m: 	Connected to database.
+2020-12-19T18:36:47.557Z [32minfo[39m: 	registerNewUser => [object Object]
+2020-12-19T18:36:47.559Z [32minfo[39m: 	undefined
+2020-12-19T18:37:59.457Z [32minfo[39m: Server is running on port: 3000
+2020-12-19T18:38:00.073Z [32minfo[39m: Connected to database.
+2020-12-19T18:38:03.741Z [32minfo[39m: registerNewUser => [object Object]
+2020-12-19T18:38:03.743Z [32minfo[39m: undefined
+2020-12-19T18:38:09.545Z [32minfo[39m: Server is running on port: 3000
+2020-12-19T18:38:11.097Z [32minfo[39m: registerNewUser => [object Object]
+2020-12-19T18:38:11.098Z [32minfo[39m: undefined
+2020-12-19T18:38:11.312Z [32minfo[39m: Connected to database.
+2020-12-19T18:38:16.767Z [32minfo[39m: Server is running on port: 3000
+2020-12-19T18:38:17.635Z [32minfo[39m: Connected to database.
+2020-12-19T18:38:18.733Z [32minfo[39m: Server is running on port: 3000
+2020-12-19T18:38:19.700Z [32minfo[39m: Connected to database.
+2020-12-19T18:38:20.517Z [32minfo[39m: registerNewUser => [object Object]
+2020-12-19T18:38:20.518Z [32minfo[39m: undefined
+2020-12-19T18:38:39.411Z [32minfo[39m: Server is running on port: 3000
+2020-12-19T18:38:40.332Z [32minfo[39m: Connected to database.
+2020-12-19T18:38:42.858Z [32minfo[39m: registerNewUser => { email: 'newuser@gmail.com', password: 'securepassword' }
+2020-12-19T18:38:42.860Z [32minfo[39m: undefined
+2020-12-19T18:40:36.011Z [32minfo[39m: Server is running on port: 3000
+2020-12-19T18:40:55.390Z [32minfo[39m: register new user: newuser@gmail.com, role: %{role}
+2020-12-19T18:40:57.338Z [31merror[39m: undefined
+2020-12-19T18:41:05.394Z [31merror[39m: undefined
+2020-12-19T18:41:33.249Z [32minfo[39m: Server is running on port: 3000
+2020-12-19T18:41:34.269Z [32minfo[39m: Connected to database.
+2020-12-19T18:41:35.858Z [32minfo[39m: register new user: newuser@gmail.com, role: undefined
+2020-12-19T18:42:18.071Z [32minfo[39m: register new user: newuser@gmail.com, role: undefined
+2020-12-19T18:42:54.442Z [32minfo[39m: register new user: newuser@gmail.com, role: undefined
+2020-12-19T18:43:07.263Z [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at Function.Model.$wrapCallback (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\model.js:4862:32)
+    at C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\query.js:4370:21
+    at C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at model.Query.exec (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\query.js:4369:10)
+    at registerNewUser (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\routes\reqs\registerNewUser.js:11:48)
+    at Layer.handle [as handle_request] (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:47:12) {
+  [stack]: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/\n" +
+    '    at Function.Model.$wrapCallback (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\model.js:4862:32)\n' +
+    '    at C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\query.js:4370:21\n' +
+    '    at C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\helpers\\promiseOrCallback.js:31:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\helpers\\promiseOrCallback.js:30:10)\n' +
+    '    at model.Query.exec (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\query.js:4369:10)\n' +
+    '    at registerNewUser (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\routes\\reqs\\registerNewUser.js:11:48)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:275:10)\n' +
+    '    at Function.handle (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:174:3)\n' +
+    '    at router (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  message: "Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/",
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    setName: 'atlas-u913b4-shard-0',
+    maxSetVersion: 1,
+    maxElectionId: 7fffffff0000000000000004,
+    servers: Map {
+      'cluster0-shard-00-00.atba9.mongodb.net:27017' => ServerDescription {
+        address: 'cluster0-shard-00-00.atba9.mongodb.net:27017',
+        error: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.atba9.mongodb.net
+            at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+          [stack]: 'Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.atba9.mongodb.net\n' +
+            '    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)',
+          [message]: 'getaddrinfo ENOTFOUND cluster0-shard-00-00.atba9.mongodb.net',
+          name: 'MongoNetworkError',
+          [errmsg]: [Getter],
+          [errorLabels]: [Getter]
+        },
+        roundTripTime: -1,
+        lastUpdateTime: 11567697,
+        lastWriteDate: null,
+        opTime: null,
+        type: 'Unknown',
+        topologyVersion: undefined,
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        hosts: [ [length]: 0 ],
+        passives: [ [length]: 0 ],
+        arbiters: [ [length]: 0 ],
+        tags: [ [length]: 0 ],
+        [allHosts]: [Getter],
+        [isReadable]: [Getter],
+        [isDataBearing]: [Getter],
+        [isWritable]: [Getter],
+        [host]: [Getter],
+        [port]: [Getter]
+      },
+      'cluster0-shard-00-01.atba9.mongodb.net:27017' => ServerDescription {
+        address: 'cluster0-shard-00-01.atba9.mongodb.net:27017',
+        error: Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.atba9.mongodb.net
+            at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+          [stack]: 'Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.atba9.mongodb.net\n' +
+            '    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)',
+          [message]: 'getaddrinfo ENOTFOUND cluster0-shard-00-01.atba9.mongodb.net',
+          name: 'MongoNetworkError',
+          [errmsg]: [Getter],
+          [errorLabels]: [Getter]
+        },
+        roundTripTime: -1,
+        lastUpdateTime: 11567699,
+        lastWriteDate: null,
+        opTime: null,
+        type: 'Unknown',
+        topologyVersion: undefined,
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        hosts: [ [length]: 0 ],
+        passives: [ [length]: 0 ],
+        arbiters: [ [length]: 0 ],
+        tags: [ [length]: 0 ],
+        [allHosts]: [Getter],
+        [isReadable]: [Getter],
+        [isDataBearing]: [Getter],
+        [isWritable]: [Getter],
+        [host]: [Getter],
+        [port]: [Getter]
+      },
+      'cluster0-shard-00-02.atba9.mongodb.net:27017' => ServerDescription {
+        address: 'cluster0-shard-00-02.atba9.mongodb.net:27017',
+        error: Error: getaddrinfo ENOTFOUND cluster0-shard-00-02.atba9.mongodb.net
+            at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+          [stack]: 'Error: getaddrinfo ENOTFOUND cluster0-shard-00-02.atba9.mongodb.net\n' +
+            '    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)',
+          [message]: 'getaddrinfo ENOTFOUND cluster0-shard-00-02.atba9.mongodb.net',
+          name: 'MongoNetworkError',
+          [errmsg]: [Getter],
+          [errorLabels]: [Getter]
+        },
+        roundTripTime: -1,
+        lastUpdateTime: 11567697,
+        lastWriteDate: null,
+        opTime: null,
+        type: 'Unknown',
+        topologyVersion: undefined,
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        hosts: [ [length]: 0 ],
+        passives: [ [length]: 0 ],
+        arbiters: [ [length]: 0 ],
+        tags: [ [length]: 0 ],
+        [allHosts]: [Getter],
+        [isReadable]: [Getter],
+        [isDataBearing]: [Getter],
+        [isWritable]: [Getter],
+        [host]: [Getter],
+        [port]: [Getter]
+      },
+      [size]: 3
+    },
+    stale: false,
+    compatible: true,
+    compatibilityError: null,
+    logicalSessionTimeoutMinutes: null,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    commonWireVersion: 8,
+    [options]: {
+      useUnifiedTopology: true,
+      localThresholdMS: 15,
+      serverSelectionTimeoutMS: 30000,
+      heartbeatFrequencyMS: 10000,
+      minHeartbeatFrequencyMS: 500,
+      cursorFactory: [class Cursor extends CoreCursor] {
+        [length]: 4,
+        [prototype]: Cursor {
+          [constructor]: [Circular],
+          [readPreference]: [Getter],
+          [sortValue]: [Getter],
+          [_initializeCursor]: [Function],
+          [hasNext]: [Function],
+          [next]: [Function],
+          [filter]: [Function],
+          [maxScan]: [Function],
+          [hint]: [Function],
+          [min]: [Function],
+          [max]: [Function],
+          [returnKey]: [Function],
+          [showRecordId]: [Function],
+          [snapshot]: [Function],
+          [setCursorOption]: [Function],
+          [addCursorFlag]: [Function],
+          [addQueryModifier]: [Function],
+          [comment]: [Function],
+          [maxAwaitTimeMS]: [Function],
+          [maxTimeMS]: [Function],
+          [project]: [Function],
+          [sort]: [Function],
+          [batchSize]: [Function],
+          [collation]: [Function],
+          [limit]: [Function],
+          [skip]: [Function],
+          [each]: [Function],
+          [forEach]: [Function],
+          [setReadPreference]: [Function],
+          [toArray]: [Function],
+          [count]: [Function],
+          [close]: [Function],
+          [map]: [Function],
+          [isClosed]: [Function],
+          [destroy]: [Function],
+          [stream]: [Function],
+          [transformStream]: [Function],
+          [explain]: [Function],
+          [getLogger]: [Function],
+          maxTimeMs: [Function],
+          [readableHighWaterMark]: [Getter],
+          [readableBuffer]: [Getter],
+          [readableFlowing]: [Getter/Setter],
+          [readableLength]: [Getter],
+          [readableObjectMode]: [Getter],
+          [readableEncoding]: [Getter],
+          [destroyed]: [Getter/Setter],
+          [readableEnded]: [Getter],
+          [paused]: [Getter/Setter]
+        },
+        [name]: 'Cursor'
+      },
+      reconnect: false,
+      emitError: true,
+      maxPoolSize: 10,
+      minPoolSize: 0,
+      monitorCommands: false,
+      servers: [
+        { host: 'cluster0-shard-00-00.atba9.mongodb.net', port: 27017 },
+        { host: 'cluster0-shard-00-01.atba9.mongodb.net', port: 27017 },
+        { host: 'cluster0-shard-00-02.atba9.mongodb.net', port: 27017 },
+        [length]: 3
+      ],
+      authSource: 'admin',
+      setName: 'atlas-u913b4-shard-0',
+      retryWrites: true,
+      w: 'majority',
+      ssl: true,
+      caseTranslate: true,
+      useNewUrlParser: true,
+      promiseLibrary: [Function: Promise] {
+        [length]: 1,
+        [name]: 'Promise',
+        [prototype]: Promise {
+          [constructor]: [Circular],
+          [then]: [Function],
+          [catch]: [Function],
+          [finally]: [Function],
+          [Symbol(Symbol.toStringTag)]: 'Promise'
+        },
+        [all]: [Function: all] { [length]: 1, [name]: 'all' },
+        [race]: [Function: race] { [length]: 1, [name]: 'race' },
+        [resolve]: [Function: resolve] { [length]: 1, [name]: 'resolve' },
+        [reject]: [Function: reject] { [length]: 1, [name]: 'reject' },
+        [allSettled]: [Function: allSettled] { [length]: 1, [name]: 'allSettled' },
+        [Symbol(Symbol.species)]: [Getter]
+      },
+      driverInfo: { name: 'Mongoose', version: '5.11.7' },
+      checkServerIdentity: true,
+      rejectUnauthorized: true,
+      auth: {
+        username: 'drumnickydrum',
+        password: 'f9VQa7eQO2YoasHP',
+        db: 'admin',
+        user: 'drumnickydrum'
+      },
+      dbName: 'citymd',
+      srvHost: 'cluster0.atba9.mongodb.net',
+      name: 'Mongoose',
+      version: '5.11.7',
+      socketTimeout: 0,
+      connectionTimeout: 10000,
+      useRecoveryToken: true,
+      readPreference: ReadPreference {
+        mode: 'primary',
+        tags: undefined,
+        hedge: undefined,
+        preference: [Getter]
+      },
+      credentials: MongoCredentials {
+        username: 'drumnickydrum',
+        password: 'f9VQa7eQO2YoasHP',
+        source: 'admin',
+        mechanism: 'default',
+        mechanismProperties: {}
+      },
+      metadata: {
+        driver: { name: 'nodejs|Mongoose', version: '3.6.3' },
+        os: {
+          type: 'Windows_NT',
+          name: 'win32',
+          architecture: 'x64',
+          version: '10.0.18363'
+        },
+        platform: "'Node.js v12.19.0, LE (unified)",
+        version: '3.6.3|5.11.7'
+      },
+      compression: { compressors: [ [length]: 0 ] }
+    },
+    [error]: [Getter],
+    [hasKnownServers]: [Getter],
+    [hasDataBearingServers]: [Getter]
+  },
+  [name]: 'MongooseServerSelectionError'
+}
+2020-12-19T18:43:24.443Z [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at Function.Model.$wrapCallback (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\model.js:4862:32)
+    at C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\query.js:4370:21
+    at C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\helpers\promiseOrCallback.js:30:10)
+    at model.Query.exec (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\mongoose\lib\query.js:4369:10)
+    at registerNewUser (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\routes\reqs\registerNewUser.js:11:48)
+    at Layer.handle [as handle_request] (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\Users\Nicky\Documents\web_projects\city-md-covid-testing\server\node_modules\express\lib\router\index.js:47:12) {
+  [stack]: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/\n" +
+    '    at Function.Model.$wrapCallback (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\model.js:4862:32)\n' +
+    '    at C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\query.js:4370:21\n' +
+    '    at C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\helpers\\promiseOrCallback.js:31:5\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at promiseOrCallback (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\helpers\\promiseOrCallback.js:30:10)\n' +
+    '    at model.Query.exec (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\mongoose\\lib\\query.js:4369:10)\n' +
+    '    at registerNewUser (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\routes\\reqs\\registerNewUser.js:11:48)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:275:10)\n' +
+    '    at Function.handle (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:174:3)\n' +
+    '    at router (C:\\Users\\Nicky\\Documents\\web_projects\\city-md-covid-testing\\server\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  message: "Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/",
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    setName: 'atlas-u913b4-shard-0',
+    maxSetVersion: 1,
+    maxElectionId: 7fffffff0000000000000004,
+    servers: Map {
+      'cluster0-shard-00-00.atba9.mongodb.net:27017' => ServerDescription {
+        address: 'cluster0-shard-00-00.atba9.mongodb.net:27017',
+        error: Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.atba9.mongodb.net
+            at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+          [stack]: 'Error: getaddrinfo ENOTFOUND cluster0-shard-00-00.atba9.mongodb.net\n' +
+            '    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)',
+          [message]: 'getaddrinfo ENOTFOUND cluster0-shard-00-00.atba9.mongodb.net',
+          name: 'MongoNetworkError',
+          [errmsg]: [Getter],
+          [errorLabels]: [Getter]
+        },
+        roundTripTime: -1,
+        lastUpdateTime: 11585246,
+        lastWriteDate: null,
+        opTime: null,
+        type: 'Unknown',
+        topologyVersion: undefined,
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        hosts: [ [length]: 0 ],
+        passives: [ [length]: 0 ],
+        arbiters: [ [length]: 0 ],
+        tags: [ [length]: 0 ],
+        [allHosts]: [Getter],
+        [isReadable]: [Getter],
+        [isDataBearing]: [Getter],
+        [isWritable]: [Getter],
+        [host]: [Getter],
+        [port]: [Getter]
+      },
+      'cluster0-shard-00-01.atba9.mongodb.net:27017' => ServerDescription {
+        address: 'cluster0-shard-00-01.atba9.mongodb.net:27017',
+        error: Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.atba9.mongodb.net
+            at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+          [stack]: 'Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.atba9.mongodb.net\n' +
+            '    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)',
+          [message]: 'getaddrinfo ENOTFOUND cluster0-shard-00-01.atba9.mongodb.net',
+          name: 'MongoNetworkError',
+          [errmsg]: [Getter],
+          [errorLabels]: [Getter]
+        },
+        roundTripTime: -1,
+        lastUpdateTime: 11585248,
+        lastWriteDate: null,
+        opTime: null,
+        type: 'Unknown',
+        topologyVersion: undefined,
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        hosts: [ [length]: 0 ],
+        passives: [ [length]: 0 ],
+        arbiters: [ [length]: 0 ],
+        tags: [ [length]: 0 ],
+        [allHosts]: [Getter],
+        [isReadable]: [Getter],
+        [isDataBearing]: [Getter],
+        [isWritable]: [Getter],
+        [host]: [Getter],
+        [port]: [Getter]
+      },
+      'cluster0-shard-00-02.atba9.mongodb.net:27017' => ServerDescription {
+        address: 'cluster0-shard-00-02.atba9.mongodb.net:27017',
+        error: Error: getaddrinfo ENOTFOUND cluster0-shard-00-02.atba9.mongodb.net
+            at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26) {
+          [stack]: 'Error: getaddrinfo ENOTFOUND cluster0-shard-00-02.atba9.mongodb.net\n' +
+            '    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)',
+          [message]: 'getaddrinfo ENOTFOUND cluster0-shard-00-02.atba9.mongodb.net',
+          name: 'MongoNetworkError',
+          [errmsg]: [Getter],
+          [errorLabels]: [Getter]
+        },
+        roundTripTime: -1,
+        lastUpdateTime: 11585248,
+        lastWriteDate: null,
+        opTime: null,
+        type: 'Unknown',
+        topologyVersion: undefined,
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        hosts: [ [length]: 0 ],
+        passives: [ [length]: 0 ],
+        arbiters: [ [length]: 0 ],
+        tags: [ [length]: 0 ],
+        [allHosts]: [Getter],
+        [isReadable]: [Getter],
+        [isDataBearing]: [Getter],
+        [isWritable]: [Getter],
+        [host]: [Getter],
+        [port]: [Getter]
+      },
+      [size]: 3
+    },
+    stale: false,
+    compatible: true,
+    compatibilityError: null,
+    logicalSessionTimeoutMinutes: null,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    commonWireVersion: 8,
+    [options]: {
+      useUnifiedTopology: true,
+      localThresholdMS: 15,
+      serverSelectionTimeoutMS: 30000,
+      heartbeatFrequencyMS: 10000,
+      minHeartbeatFrequencyMS: 500,
+      cursorFactory: [class Cursor extends CoreCursor] {
+        [length]: 4,
+        [prototype]: Cursor {
+          [constructor]: [Circular],
+          [readPreference]: [Getter],
+          [sortValue]: [Getter],
+          [_initializeCursor]: [Function],
+          [hasNext]: [Function],
+          [next]: [Function],
+          [filter]: [Function],
+          [maxScan]: [Function],
+          [hint]: [Function],
+          [min]: [Function],
+          [max]: [Function],
+          [returnKey]: [Function],
+          [showRecordId]: [Function],
+          [snapshot]: [Function],
+          [setCursorOption]: [Function],
+          [addCursorFlag]: [Function],
+          [addQueryModifier]: [Function],
+          [comment]: [Function],
+          [maxAwaitTimeMS]: [Function],
+          [maxTimeMS]: [Function],
+          [project]: [Function],
+          [sort]: [Function],
+          [batchSize]: [Function],
+          [collation]: [Function],
+          [limit]: [Function],
+          [skip]: [Function],
+          [each]: [Function],
+          [forEach]: [Function],
+          [setReadPreference]: [Function],
+          [toArray]: [Function],
+          [count]: [Function],
+          [close]: [Function],
+          [map]: [Function],
+          [isClosed]: [Function],
+          [destroy]: [Function],
+          [stream]: [Function],
+          [transformStream]: [Function],
+          [explain]: [Function],
+          [getLogger]: [Function],
+          maxTimeMs: [Function],
+          [readableHighWaterMark]: [Getter],
+          [readableBuffer]: [Getter],
+          [readableFlowing]: [Getter/Setter],
+          [readableLength]: [Getter],
+          [readableObjectMode]: [Getter],
+          [readableEncoding]: [Getter],
+          [destroyed]: [Getter/Setter],
+          [readableEnded]: [Getter],
+          [paused]: [Getter/Setter]
+        },
+        [name]: 'Cursor'
+      },
+      reconnect: false,
+      emitError: true,
+      maxPoolSize: 10,
+      minPoolSize: 0,
+      monitorCommands: false,
+      servers: [
+        { host: 'cluster0-shard-00-00.atba9.mongodb.net', port: 27017 },
+        { host: 'cluster0-shard-00-01.atba9.mongodb.net', port: 27017 },
+        { host: 'cluster0-shard-00-02.atba9.mongodb.net', port: 27017 },
+        [length]: 3
+      ],
+      authSource: 'admin',
+      setName: 'atlas-u913b4-shard-0',
+      retryWrites: true,
+      w: 'majority',
+      ssl: true,
+      caseTranslate: true,
+      useNewUrlParser: true,
+      promiseLibrary: [Function: Promise] {
+        [length]: 1,
+        [name]: 'Promise',
+        [prototype]: Promise {
+          [constructor]: [Circular],
+          [then]: [Function],
+          [catch]: [Function],
+          [finally]: [Function],
+          [Symbol(Symbol.toStringTag)]: 'Promise'
+        },
+        [all]: [Function: all] { [length]: 1, [name]: 'all' },
+        [race]: [Function: race] { [length]: 1, [name]: 'race' },
+        [resolve]: [Function: resolve] { [length]: 1, [name]: 'resolve' },
+        [reject]: [Function: reject] { [length]: 1, [name]: 'reject' },
+        [allSettled]: [Function: allSettled] { [length]: 1, [name]: 'allSettled' },
+        [Symbol(Symbol.species)]: [Getter]
+      },
+      driverInfo: { name: 'Mongoose', version: '5.11.7' },
+      checkServerIdentity: true,
+      rejectUnauthorized: true,
+      auth: {
+        username: 'drumnickydrum',
+        password: 'f9VQa7eQO2YoasHP',
+        db: 'admin',
+        user: 'drumnickydrum'
+      },
+      dbName: 'citymd',
+      srvHost: 'cluster0.atba9.mongodb.net',
+      name: 'Mongoose',
+      version: '5.11.7',
+      socketTimeout: 0,
+      connectionTimeout: 10000,
+      useRecoveryToken: true,
+      readPreference: ReadPreference {
+        mode: 'primary',
+        tags: undefined,
+        hedge: undefined,
+        preference: [Getter]
+      },
+      credentials: MongoCredentials {
+        username: 'drumnickydrum',
+        password: 'f9VQa7eQO2YoasHP',
+        source: 'admin',
+        mechanism: 'default',
+        mechanismProperties: {}
+      },
+      metadata: {
+        driver: { name: 'nodejs|Mongoose', version: '3.6.3' },
+        os: {
+          type: 'Windows_NT',
+          name: 'win32',
+          architecture: 'x64',
+          version: '10.0.18363'
+        },
+        platform: "'Node.js v12.19.0, LE (unified)",
+        version: '3.6.3|5.11.7'
+      },
+      compression: { compressors: [ [length]: 0 ] }
+    },
+    [error]: [Getter],
+    [hasKnownServers]: [Getter],
+    [hasDataBearingServers]: [Getter]
+  },
+  [name]: 'MongooseServerSelectionError'
+}
+2020-12-19T18:47:41.776Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:47:41.780Z [31merror[39m: 	undefined
+2020-12-19T18:47:57.667Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:47:57.672Z [31merror[39m: 	Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (dns.js:203:19) {
+  [stack]: 'Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net\n' +
+    '    at QueryReqWrap.onresolve [as oncomplete] (dns.js:203:19)',
+  [message]: 'querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net',
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.atba9.mongodb.net'
+}
+2020-12-19T18:49:38.210Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:49:38.215Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:49:58.066Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:49:58.070Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:50:18.159Z [32minfo[39m: 	register new user: newuser@gmail.com, role: undefined
+2020-12-19T18:50:23.872Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:50:23.879Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:50:39.184Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:50:39.188Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:50:41.213Z [32minfo[39m: 	register new user: newuser@gmail.com, role: undefined
+2020-12-19T18:50:51.218Z [31merror[39m: 	%o
+2020-12-19T18:50:52.551Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:50:52.555Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:51:05.881Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:51:05.885Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:51:09.637Z [32minfo[39m: 	register new user: newuser@gmail.com, role: undefined
+2020-12-19T18:51:19.641Z [31merror[39m: 	%o
+2020-12-19T18:51:27.955Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:51:27.959Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:51:35.987Z [32minfo[39m: 	register new user: newuser@gmail.com, role: undefined
+2020-12-19T18:51:45.991Z [31merror[39m: 	Operation `users.findOne()` buffering timed out after 10000ms
+2020-12-19T18:52:08.007Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:52:08.011Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:55:08.480Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:55:08.486Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:56:05.126Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:56:05.130Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:56:46.427Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:56:46.431Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:57:17.053Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:57:17.057Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:57:21.034Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:57:21.037Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:57:31.674Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:57:31.678Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:57:40.340Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:57:40.344Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:57:51.170Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:57:51.174Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:58:03.775Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:58:03.779Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:58:14.719Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:58:14.723Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T18:58:18.177Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T18:58:18.181Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T19:04:01.246Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:04:01.250Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T19:04:06.743Z [32minfo[39m: 	registerNewUser => %o
+2020-12-19T19:04:16.747Z [31merror[39m: 	Operation `users.findOne()` buffering timed out after 10000ms
+2020-12-19T19:04:21.200Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:04:21.212Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T19:04:22.665Z [32minfo[39m: 	registerNewUser => { role: undefined, email: 'newuser@gmail.com' }
+2020-12-19T19:04:32.670Z [31merror[39m: 	Operation `users.findOne()` buffering timed out after 10000ms
+2020-12-19T19:06:09.468Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:06:09.472Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T19:06:29.409Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:06:29.413Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T19:07:39.673Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:07:50.368Z [32minfo[39m: 	registerNewUser => { role: undefined, email: 'newuser@gmail.com' }
+2020-12-19T19:07:51.206Z [32minfo[39m: 	Connected to database.
+2020-12-19T19:08:06.000Z [32minfo[39m: 	registerNewUser => { role: undefined, email: 'neweruser@gmail.com' }
+2020-12-19T19:08:06.340Z [31merror[39m: 	req#login requires a callback function
+2020-12-19T19:10:53.209Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:10:55.956Z [32minfo[39m: 	Connected to database.
+2020-12-19T19:12:40.980Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:12:41.647Z [32minfo[39m: 	Connected to database.
+2020-12-19T19:34:15.110Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:34:16.030Z [32minfo[39m: 	Connected to database.
+2020-12-19T19:36:32.452Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:36:33.538Z [32minfo[39m: 	Connected to database.
+2020-12-19T19:38:16.107Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:38:16.900Z [32minfo[39m: 	Connected to database.
+2020-12-19T19:38:49.671Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T19:38:50.294Z [32minfo[39m: 	Connected to database.
+2020-12-19T20:49:36.054Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T20:49:36.058Z [31merror[39m: 	querySrv ECONNREFUSED _mongodb._tcp.cluster0.atba9.mongodb.net
+2020-12-19T20:50:24.001Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T20:50:35.645Z [32minfo[39m: 	Connected to database.
+2020-12-19T20:50:50.073Z [32minfo[39m: 	newestuser@gmail.comsuccessfully registered!
+2020-12-19T20:50:58.921Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T20:50:59.534Z [32minfo[39m: 	Connected to database.
+2020-12-19T20:51:19.026Z [32minfo[39m: 	newestuser3@gmail.com successfully registered!
+2020-12-19T21:31:36.704Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T21:31:37.534Z [32minfo[39m: 	Connected to database.
+2020-12-19T21:31:46.760Z [32minfo[39m: 	newestuser35@gmail.com successfully registered!
+2020-12-19T21:31:56.580Z [32minfo[39m: 	anotheruser5@gmail.com successfully registered!
+2020-12-19T21:32:01.795Z [32minfo[39m: 	anotheruser78@gmail.com successfully registered!
+2020-12-19T21:37:58.979Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T21:37:59.758Z [32minfo[39m: 	Connected to database.

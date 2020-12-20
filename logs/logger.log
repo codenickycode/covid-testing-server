@@ -1,0 +1,215 @@
+2020-12-19T21:38:13.488Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T21:38:14.173Z [32minfo[39m: 	Connected to database.
+[32minfo[39m: 	Server is running on port: 3000 | 2020-12-19T21:39:05.841Z
+[32minfo[39m: 	Connected to database. | 2020-12-19T21:39:06.533Z
+[32minfo[39m: 	anotheruser7988@gmail.com successfully registered! | 2020-12-19T21:39:14.102Z
+info: 	Server is running on port: 3000 | 2020-12-19T21:41:34.716Z
+info: 	Connected to database. | 2020-12-19T21:41:35.454Z
+info: 	anothersdfuser7988@gmail.com successfully registered! | 2020-12-19T21:41:52.367Z
+2020-12-19T21:42:40.895Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T21:42:41.651Z [32minfo[39m: 	Connected to database.
+2020-12-19T21:43:11.397Z [32minfo[39m: 	Server is running on port: 3000
+2020-12-19T21:43:12.090Z [32minfo[39m: 	Connected to database.
+2020-12-19T21:43:15.317Z info: 	Server is running on port: 3000
+2020-12-19T21:43:15.999Z info: 	Connected to database.
+2020-12-19T21:43:22.139Z info: 	anothersdhjfuser7988@gmail.com successfully registered!
+2020-12-19T21:43:35.859Z info: 	Server is running on port: 3000
+2020-12-19T21:43:36.635Z info: 	Connected to database.
+2020-12-19T21:44:00.277Z info: 	anothersdfghhjfuser7988@gmail.com successfully registered!
+2020-12-19T21:52:05.051Z info: 	Server is running on port: 3000
+2020-12-19T21:52:05.767Z info: 	Connected to database.
+2020-12-19T21:53:15.960Z info: 	Server is running on port: 3000
+2020-12-19T21:53:18.205Z info: 	Connected to database.
+2020-12-19T21:54:00.899Z info: 	brandnewuser@gmail.com is attempting to register, role: client
+2020-12-19T21:54:01.234Z info: 	brandnewuser@gmail.com successfully registered!
+2020-12-19T21:54:12.484Z info: 	anothernewclient@gmail.com is attempting to register, role: client
+2020-12-19T21:54:12.854Z info: 	anothernewclient@gmail.com successfully registered!
+2020-12-19T22:04:11.109Z info: 	Server is running on port: 3000
+2020-12-19T22:04:11.870Z info: 	Connected to database.
+2020-12-19T22:04:18.771Z info: 	newuser@gmail.com is attempting to register, role: client
+2020-12-19T22:14:33.016Z info: 	Server is running on port: 3000
+2020-12-19T22:14:33.734Z info: 	Connected to database.
+2020-12-19T22:14:45.033Z info: 	newuser@gmail.com is attempting to register, role: client
+2020-12-19T22:14:45.036Z info: 	undefined
+2020-12-19T22:15:42.542Z info: 	Server is running on port: 3000
+2020-12-19T22:15:43.224Z info: 	Connected to database.
+2020-12-19T22:16:06.273Z info: 	Server is running on port: 3000
+2020-12-19T22:16:06.917Z info: 	Connected to database.
+2020-12-19T22:16:56.654Z info: 	Server is running on port: 3000
+2020-12-19T22:16:57.435Z info: 	Connected to database.
+2020-12-19T22:17:02.913Z info: 	Server is running on port: 3000
+2020-12-19T22:17:03.921Z info: 	Connected to database.
+2020-12-19T22:17:10.529Z info: 	Server is running on port: 3000
+2020-12-19T22:17:11.453Z info: 	Connected to database.
+2020-12-19T22:17:24.655Z info: 	newuser@gmail.com is attempting to register, role: client
+2020-12-19T22:17:24.655Z info: 	400
+2020-12-19T22:17:39.041Z info: 	Server is running on port: 3000
+2020-12-19T22:17:39.752Z info: 	Connected to database.
+2020-12-19T22:17:44.678Z info: 	newuser@gmail.com is attempting to register, role: client
+2020-12-19T22:17:44.679Z info: 	400: Password field required.
+2020-12-19T22:20:06.934Z info: 	Server is running on port: 3000
+2020-12-19T22:20:07.581Z info: 	Connected to database.
+2020-12-19T22:22:21.960Z info: 	Server is running on port: 3000
+2020-12-19T22:22:22.931Z info: 	Connected to database.
+2020-12-19T22:22:51.911Z info: 	Server is running on port: 3000
+2020-12-19T22:22:52.988Z info: 	Connected to database.
+2020-12-19T22:23:14.382Z info: 	Server is running on port: 3000
+2020-12-19T22:23:14.969Z info: 	Connected to database.
+2020-12-19T22:23:38.407Z info: 	Server is running on port: 3000
+2020-12-19T22:23:39.285Z info: 	Connected to database.
+2020-12-19T22:23:54.097Z info: 	Server is running on port: 3000
+2020-12-19T22:23:54.884Z info: 	Connected to database.
+2020-12-19T22:24:33.156Z info: 	Server is running on port: 3000
+2020-12-19T22:24:33.968Z info: 	Connected to database.
+2020-12-19T22:25:17.772Z info: 	newuser@gmail.com is attempting to register, role: client
+2020-12-19T22:25:17.773Z info: 	400: Password field required.
+2020-12-19T22:25:33.444Z info: 	 is attempting to register, role: client
+2020-12-19T22:25:33.445Z info: 	400: Email field required
+2020-12-19T22:25:48.278Z info: 	mrNewClient@gmail.com is attempting to register, role: client
+2020-12-19T22:28:47.923Z info: 	Server is running on port: 3000
+2020-12-19T22:28:48.988Z info: 	Connected to database.
+2020-12-19T22:31:04.295Z info: 	Server is running on port: 3000
+2020-12-19T22:31:05.026Z info: 	Connected to database.
+2020-12-19T22:31:13.537Z info: 	mrBrandNewClient@gmail.com is attempting to register, role: client
+2020-12-19T22:32:44.318Z info: 	Server is running on port: 3000
+2020-12-19T22:32:44.970Z info: 	Connected to database.
+2020-12-19T22:33:04.454Z info: 	mrBrandNewClient@gmail.com is attempting to register, role: client
+2020-12-19T22:33:04.525Z info: 	400: User already registered.
+2020-12-19T22:33:11.012Z info: 	mrBrandNewClient@gmail.com is attempting to register, role: client
+2020-12-19T22:33:11.013Z info: 	400: Password field required.
+2020-12-19T22:33:26.510Z info: 	mrsNewClient@gmail.com is attempting to register, role: client
+2020-12-19T22:34:05.522Z info: 	Server is running on port: 3000
+2020-12-19T22:34:06.212Z info: 	Connected to database.
+2020-12-19T22:34:12.193Z info: 	asdfffdsa@gmail.com is attempting to register, role: client
+2020-12-19T22:34:29.819Z info: 	Server is running on port: 3000
+2020-12-19T22:34:30.581Z info: 	Connected to database.
+2020-12-19T22:35:15.797Z info: 	Server is running on port: 3000
+2020-12-19T22:35:16.411Z info: 	Connected to database.
+2020-12-19T22:35:46.170Z info: 	Server is running on port: 3000
+2020-12-19T22:35:51.937Z info: 	asdfffdsa@gmail.com is attempting to register, role: client
+2020-12-19T22:36:01.942Z error: 	registerNewUser => {
+  role: 'client',
+  email: 'asdfffdsa@gmail.com',
+  error: 'Operation `users.findOne()` buffering timed out after 10000ms'
+}
+2020-12-19T22:36:07.415Z error: 	connect ETIMEDOUT 3.225.145.70:27017
+2020-12-19T22:36:36.864Z info: 	asdfffdsa@gmail.com is attempting to register, role: client
+2020-12-19T22:36:46.865Z error: 	registerNewUser => {
+  role: 'client',
+  email: 'asdfffdsa@gmail.com',
+  error: 'Operation `users.findOne()` buffering timed out after 10000ms'
+}
+2020-12-19T22:37:04.860Z info: 	Server is running on port: 3000
+2020-12-19T22:37:05.593Z info: 	Connected to database.
+2020-12-19T22:37:12.248Z info: 	asdfffdsaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:41:40.807Z info: 	Server is running on port: 3000
+2020-12-19T22:41:41.486Z info: 	Connected to database.
+2020-12-19T22:41:46.447Z info: 	asdfffdsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:42:09.690Z info: 	Server is running on port: 3000
+2020-12-19T22:42:10.369Z info: 	Connected to database.
+2020-12-19T22:42:13.568Z info: 	asdafffdsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:44:30.520Z info: 	Server is running on port: 3000
+2020-12-19T22:44:31.160Z info: 	Connected to database.
+2020-12-19T22:44:34.112Z info: 	asdafffdsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:44:34.167Z info: 	400: User already registered.
+2020-12-19T22:44:37.750Z info: 	asdafffddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:44:52.429Z info: 	Server is running on port: 3000
+2020-12-19T22:44:53.459Z info: 	Connected to database.
+2020-12-19T22:48:08.845Z info: 	Server is running on port: 3000
+2020-12-19T22:48:09.679Z info: 	Connected to database.
+2020-12-19T22:48:24.760Z info: 	Server is running on port: 3000
+2020-12-19T22:48:25.700Z info: 	Connected to database.
+2020-12-19T22:48:31.674Z info: 	asdafffsdfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:49:00.210Z info: 	Server is running on port: 3000
+2020-12-19T22:49:00.973Z info: 	Connected to database.
+2020-12-19T22:52:50.501Z info: 	Server is running on port: 3000
+2020-12-19T22:52:51.586Z info: 	Connected to database.
+2020-12-19T22:52:55.277Z info: 	asdafffsddfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:53:49.154Z info: 	Server is running on port: 3000
+2020-12-19T22:53:49.913Z info: 	Connected to database.
+2020-12-19T22:53:56.568Z info: 	asdafffsdedfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:53:56.906Z info: 	200: this is bogus
+2020-12-19T22:54:04.469Z info: 	Server is running on port: 3000
+2020-12-19T22:54:05.113Z info: 	Connected to database.
+2020-12-19T22:54:08.301Z info: 	asdafffsdesdfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:54:08.643Z info: 	200: this is bogus
+2020-12-19T22:54:31.505Z info: 	Server is running on port: 3000
+2020-12-19T22:54:32.263Z info: 	Connected to database.
+2020-12-19T22:54:35.666Z info: 	asdafffesdesdfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T22:54:36.013Z info: 	200: this is bogus
+2020-12-19T23:00:07.927Z info: 	Server is running on port: 3000
+2020-12-19T23:00:08.651Z info: 	Connected to database.
+2020-12-19T23:02:39.934Z info: 	Server is running on port: 3000
+2020-12-19T23:02:40.925Z info: 	Connected to database.
+2020-12-19T23:02:41.628Z info: 	Server is running on port: 3000
+2020-12-19T23:02:42.285Z info: 	Connected to database.
+2020-12-19T23:03:50.300Z info: 	asdaffsdffesdesdfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T23:03:50.631Z info: 	200: asdaffsdffesdesdfddsaaASD@gmail.com successfully registered.
+2020-12-19T23:05:35.075Z info: 	Server is running on port: 3000
+2020-12-19T23:05:35.724Z info: 	Connected to database.
+2020-12-19T23:05:39.832Z info: 	asdaffsdffesdesddfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T23:06:12.759Z info: 	Server is running on port: 3000
+2020-12-19T23:06:14.488Z info: 	Connected to database.
+2020-12-19T23:06:17.757Z info: 	asdaffsddffesdesddfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T23:06:59.431Z info: 	Server is running on port: 3000
+2020-12-19T23:07:00.190Z info: 	Connected to database.
+2020-12-19T23:07:50.326Z info: 	Server is running on port: 3000
+2020-12-19T23:07:53.173Z info: 	Connected to database.
+2020-12-19T23:10:57.533Z info: 	Server is running on port: 3000
+2020-12-19T23:10:58.744Z info: 	Connected to database.
+2020-12-19T23:12:26.542Z info: 	Server is running on port: 3000
+2020-12-19T23:12:27.562Z info: 	Connected to database.
+2020-12-19T23:43:37.595Z info: 	Server is running on port: 3000
+2020-12-19T23:43:38.301Z info: 	Connected to database.
+2020-12-19T23:44:33.979Z info: 	Server is running on port: 3000
+2020-12-19T23:44:34.658Z info: 	Connected to database.
+2020-12-19T23:44:44.994Z info: 	Server is running on port: 3000
+2020-12-19T23:44:45.575Z info: 	Connected to database.
+2020-12-19T23:45:43.479Z info: 	Server is running on port: 3000
+2020-12-19T23:45:44.146Z info: 	Connected to database.
+2020-12-19T23:46:26.117Z info: 	Server is running on port: 3000
+2020-12-19T23:46:26.986Z info: 	Connected to database.
+2020-12-19T23:47:23.712Z info: 	Server is running on port: 3000
+2020-12-19T23:47:24.750Z info: 	Connected to database.
+2020-12-19T23:49:09.155Z info: 	asdaffsddvffesdesddfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T23:49:09.156Z info: 	asdaffsddvffesdesddfddsaaASD@gmail.com is attempting to register, role: client
+2020-12-19T23:49:09.499Z info: 	200: asdaffsddvffesdesddfddsaaASD@gmail.com successfully registered.
+2020-12-19T23:49:09.500Z info: 	asdaffsddvffesdesddfddsaaASD@gmail.com logged in.
+2020-12-19T23:49:09.501Z error: 	registerNewUser => {
+  role: 'client',
+  email: 'asdaffsddvffesdesddfddsaaASD@gmail.com',
+  error: "Cannot read property 'status' of undefined"
+}
+2020-12-19T23:49:09.515Z error: 	registerNewUser => {
+  role: 'client',
+  email: 'asdaffsddvffesdesddfddsaaASD@gmail.com',
+  error: "Cannot read property 'status' of undefined"
+}
+2020-12-19T23:50:15.818Z info: 	Server is running on port: 3000
+2020-12-19T23:50:16.891Z info: 	Connected to database.
+2020-12-19T23:50:25.309Z info: 	qwerasdf@gmail.com is attempting to register, role: client
+2020-12-19T23:50:25.629Z info: 	200: qwerasdf@gmail.com successfully registered.
+2020-12-19T23:50:25.630Z info: 	qwerasdf@gmail.com logged in.
+2020-12-19T23:54:40.746Z info: 	Server is running on port: 3000
+2020-12-19T23:54:42.833Z info: 	Connected to database.
+2020-12-19T23:55:02.816Z info: 	 is attempting to register, role: client
+2020-12-19T23:55:02.817Z info: 	400: Email field required
+2020-12-19T23:55:21.937Z info: 	marysmith@gmail.com is attempting to register, role: client
+2020-12-19T23:55:21.937Z info: 	400: Password field required.
+2020-12-19T23:55:36.712Z info: 	marysmith@gmail.com is attempting to register, role: client
+2020-12-19T23:55:37.044Z info: 	200: marysmith@gmail.com successfully registered.
+2020-12-19T23:55:37.045Z info: 	marysmith@gmail.com logged in.
+2020-12-19T23:55:59.136Z info: 	susieq@gmail.com is attempting to register, role: provider
+2020-12-19T23:55:59.439Z info: 	200: susieq@gmail.com successfully registered.
+2020-12-19T23:55:59.440Z info: 	susieq@gmail.com logged in.
+2020-12-20T00:06:15.376Z info: 	Server is running on port: 3000
+2020-12-20T00:06:18.095Z info: 	Connected to database.
+2020-12-20T00:06:35.637Z info: 	Server is running on port: 3000
+2020-12-20T00:06:56.915Z error: 	connect ETIMEDOUT 3.225.145.70:27017
+2020-12-20T00:07:58.350Z info: 	Server is running on port: 3000
+2020-12-20T00:07:59.061Z info: 	Connected to database.
+2020-12-20T00:08:04.303Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T00:08:04.613Z info: 	200: susieqasd@gmail.com successfully registered.
+2020-12-20T00:08:04.613Z info: 	susieqasd@gmail.com logged in.
+2020-12-20T00:09:28.187Z info: 	Server is running on port: 3000
+2020-12-20T00:09:28.855Z info: 	Connected to database.

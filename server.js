@@ -5,6 +5,7 @@ require('dotenv').config();
 const session = require('express-session');
 const passport = require('passport');
 const auth = require('./auth.js');
+const logger = require('./logger.js');
 
 // server settings
 const app = express();
@@ -16,7 +17,7 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true,
-    cookie: { secure: false, expires: 300000 },
+    // cookie: { secure: false, expires: 300000 },
   })
 );
 app.use(passport.initialize());
@@ -31,9 +32,9 @@ mongoose
   })
   .then(() => {
     auth(); // passport authentication
-    console.log('Connected to database.');
+    logger.info('Connected to database.');
   })
-  .catch((e) => console.log(e));
+  .catch((e) => logger.error(e.message));
 
 // routes
 const commonRouter = require('./routes/common.js');
@@ -44,5 +45,5 @@ app.use('/provider', providerRouter);
 // start
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log('Server is running on port: ', port);
+  logger.info(`Server is running on port: ${port}`);
 });

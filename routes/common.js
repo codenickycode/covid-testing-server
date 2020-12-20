@@ -1,3 +1,4 @@
+const logger = require('../logger');
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
@@ -7,6 +8,7 @@ const ensureAuthenticated = require('../tools/ensureAuthenticated.js');
 const createTruthyObject = require('../tools/createTruthyObject.js');
 const User = require('../models/User.model.js');
 const Location = require('../models/Location.model.js');
+const registerPost = require('./reqs/registerPost.js');
 
 // user login
 router
@@ -29,106 +31,58 @@ router.route('/locations').get((req, res) => {
     .catch((err) => res.status(400).json(err));
 });
 
-// register new user
-router.route('/register').post((req, res) => {
-  // parse request
-  const { email, password, role } = req.body;
-  // hash password
-  const hash = bcrypt.hashSync(password, 12);
-  // create new user
-  newUser = new User({ role, email, password: hash });
-  // check if user already registered
-  User.findOne({ email: newUser.email })
-    .then((user) => {
-      // if email exists, return false
-      if (user) {
-        return res.send(false);
-      } else {
-        // save new user to db
-        newUser
-          .save()
-          .then((dbUser) => {
-            // login user to session
-            req.login(dbUser, (err) => {
-              if (!err) {
-                return res.send('success');
-              } else {
-                return res.status(400).send('post-register login error');
-              }
-            });
-          })
-          .catch((err) => res.status(400).send(err));
-      }
-    })
-    .catch((err) => res.status(400).send('register find error'));
-});
+router.route('/register').post((req, res) => registerPost(req, res));
 
 // add an appointment
 router.route('/appointments').post(ensureAuthenticated, async (req, res) => {
-  // parse request
   const { client, name, dob, phone, date, time, location, test } = req.body;
-  // find requested location
-  const dbLocation = await Location.findById(location, {}, (err) => {
-    if (err) return res.send('location not found');
-  });
-  for (let appt of dbLocation.appointments) {
-    // if appointment date and time already taken
-    if (appt.date === date && appt.time === time) {
-      return res.send('unavailable');
+  if (!client || !location || !date || !time)
+    return res.status(400).send('required fields missing');
+  try {
+    const dbLocation = await Location.findById(location);
+    if (!dbLocation) throw new Error('location not found');
+    for (let appt of dbLocation.appointments) {
+      if (appt.date === date && appt.time === time) {
+        return res.send('unavailable');
+      }
     }
+    const _id = new ObjectId();
+    let newAppointment = { date, time, test, client, name, dob, phone, _id };
+    dbLocation.appointments.unshift(newAppointment);
+    await dbLocation.save();
+    // adjust newAppointment for client's document
+    newAppointment = {
+      date,
+      time,
+      location,
+      name: dbLocation.name,
+      address: dbLocation.address,
+      phone: dbLocation.phone,
+      test,
+      confirmation: _id,
+    };
+    let dbClient = await User.findById(client);
+    if (!dbClient) throw new Error('client not found');
+    dbClient.appointments.unshift(newAppointment);
+    const updatedClient = await dbClient.save();
+    return res.json(updatedClient);
+  } catch (err) {
+    console.log('/appointments .post =>\n', err);
+    return res.status(500).send('error');
   }
-  // create new appointment with unique mongo _id
-  const _id = new ObjectId();
-  // add it to location's appointments array
-  dbLocation.appointments.unshift({
-    date,
-    time,
-    test,
-    client,
-    name,
-    dob,
-    phone,
-    _id,
-  });
-  // save location
-  dbLocation
-    .save()
-    .then(async () => {
-      // adjust appointment for client's document
-      const newAppointment = {
-        date,
-        time,
-        location,
-        name: dbLocation.name,
-        address: dbLocation.address,
-        phone: dbLocation.phone,
-        test,
-        confirmation: _id,
-      };
-      // find client
-      let dbClient = await User.findById(client, {}, (err) => {
-        if (err) return res.status(400).send('client not found');
-      });
-      // add appointment to client's appointments array
-      dbClient.appointments.unshift(newAppointment);
-      dbClient
-        .save()
-        .then((client) => res.json(client))
-        .catch((err) => res.status(400).send(err));
-    })
-    .catch((err) => res.status(400).send(err));
 });
 
 // get all client appointments
 router.route('/appointments').get(ensureAuthenticated, async (req, res) => {
-  // parse request
   const client = req.body.client;
-  // find client
-  const clientDoc = await User.findById(client, {}, (err) => {
-    if (err) return res.status(400).send('client not found');
-  });
-  // return client appointments array
-  return res.json(clientDoc.appointments);
+  try {
+    const clientDoc = await User.findById(client);
+    if (!clientDoc) throw new Error('client not found');
+    return res.json(clientDoc.appointments);
+  } catch (err) {
+    console.log('/appointments .get =>\n', err);
+    return res.status(500).send('error');
+  }
 });
 
 // delete client appointment
