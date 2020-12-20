@@ -1,0 +1,85 @@
+2020-12-20T16:11:40.033Z info: 	Server is running on port: 3000
+2020-12-20T16:11:40.986Z info: 	Connected to database.
+2020-12-20T16:12:03.290Z info: 	Server is running on port: 3000
+2020-12-20T16:12:03.902Z info: 	Connected to database.
+2020-12-20T16:13:30.776Z info: 	Server is running on port: 3000
+2020-12-20T16:13:31.680Z info: 	Connected to database.
+2020-12-20T16:13:46.929Z info: 	Server is running on port: 3000
+2020-12-20T16:13:47.592Z info: 	Connected to database.
+2020-12-20T16:13:56.860Z info: 	Server is running on port: 3000
+2020-12-20T16:13:57.545Z info: 	Connected to database.
+2020-12-20T16:14:05.136Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:14:05.229Z info: 	400: User already registered.
+2020-12-20T16:17:02.986Z info: 	Server is running on port: 3000
+2020-12-20T16:17:03.787Z info: 	Connected to database.
+2020-12-20T16:17:06.348Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:17:06.418Z info: 	400: User already registered.
+2020-12-20T16:39:20.101Z info: 	Server is running on port: 3000
+2020-12-20T16:39:20.897Z info: 	Connected to database.
+2020-12-20T16:39:28.326Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:39:28.426Z info: 	400: User already registered.
+2020-12-20T16:39:28.431Z error: 	registerPost => {
+  role: 'provider',
+  email: 'susieqasd@gmail.com',
+  error: "Cannot read property 'Get' of undefined"
+}
+2020-12-20T16:40:35.689Z info: 	Server is running on port: 3000
+2020-12-20T16:40:49.581Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:40:56.304Z info: 	Connected to database.
+2020-12-20T16:40:56.365Z info: 	400: User already registered.
+2020-12-20T16:41:52.439Z info: 	Server is running on port: 3000
+2020-12-20T16:41:53.790Z info: 	Connected to database.
+2020-12-20T16:41:54.894Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:41:54.977Z info: 	400: User already registered.
+2020-12-20T16:42:24.629Z info: 	Server is running on port: 3000
+2020-12-20T16:42:25.230Z info: 	Connected to database.
+2020-12-20T16:42:26.412Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:42:26.486Z info: 	400: User already registered.
+2020-12-20T16:45:15.973Z info: 	Server is running on port: 3000
+2020-12-20T16:45:16.732Z info: 	Connected to database.
+2020-12-20T16:45:20.955Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:45:21.049Z info: 	400: User already registered.
+2020-12-20T16:46:28.055Z info: 	Server is running on port: 3000
+2020-12-20T16:46:28.598Z info: 	Connected to database.
+2020-12-20T16:46:31.129Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:46:31.207Z info: 	400: User already registered.
+2020-12-20T16:48:43.848Z info: 	Server is running on port: 3000
+2020-12-20T16:48:44.642Z info: 	Connected to database.
+2020-12-20T16:48:47.150Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:48:47.232Z info: 	400: User already registered.
+2020-12-20T16:48:51.244Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:48:51.324Z info: 	400: User already registered.
+2020-12-20T16:49:55.093Z info: 	Server is running on port: 3000
+2020-12-20T16:49:55.772Z info: 	Connected to database.
+2020-12-20T16:49:59.978Z info: 	Server is running on port: 3000
+2020-12-20T16:50:00.726Z info: 	Connected to database.
+2020-12-20T16:50:07.172Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:50:07.274Z info: 	400: User already registered.
+2020-12-20T16:50:22.530Z info: 	Server is running on port: 3000
+2020-12-20T16:50:23.167Z info: 	Connected to database.
+2020-12-20T16:50:24.351Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:50:24.422Z info: 	400: User already registered.
+2020-12-20T16:52:19.133Z info: 	Server is running on port: 3000
+2020-12-20T16:52:19.861Z info: 	Connected to database.
+2020-12-20T16:52:22.346Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:52:22.500Z info: 	400: User already registered.
+2020-12-20T16:52:27.661Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:52:27.731Z info: 	400: User already registered.
+2020-12-20T16:52:57.315Z info: 	Server is running on port: 3000
+2020-12-20T16:53:02.828Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:53:03.460Z info: 	Connected to database.
+2020-12-20T16:53:03.514Z info: 	400: User already registered.
+2020-12-20T16:54:28.671Z info: 	Server is running on port: 3000
+2020-12-20T16:54:29.379Z info: 	Connected to database.
+2020-12-20T16:54:45.806Z info: 	Server is running on port: 3000
+2020-12-20T16:54:46.622Z info: 	Connected to database.
+2020-12-20T16:54:57.186Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:54:57.279Z info: 	400: User already registered.
+2020-12-20T16:55:43.895Z info: 	Server is running on port: 3000
+2020-12-20T16:55:44.497Z info: 	Connected to database.
+2020-12-20T16:55:47.107Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:55:47.187Z info: 	400: User already registered.
+2020-12-20T16:57:03.910Z info: 	Server is running on port: 3000
+2020-12-20T16:57:04.748Z info: 	Connected to database.
+2020-12-20T16:57:05.894Z info: 	susieqasd@gmail.com is attempting to register, role: provider
+2020-12-20T16:57:05.963Z info: 	400: User already registered.

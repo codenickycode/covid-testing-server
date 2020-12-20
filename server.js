@@ -5,7 +5,8 @@ require('dotenv').config();
 const session = require('express-session');
 const passport = require('passport');
 const auth = require('./auth.js');
-const logger = require('./logger.js');
+const { logger, morganOptions } = require('./logger.js');
+const morganBody = require('morgan-body');
 
 // server settings
 const app = express();
@@ -34,7 +35,10 @@ mongoose
     auth(); // passport authentication
     logger.info('Connected to database.');
   })
-  .catch((e) => logger.error(e.message));
+  .catch((e) => logger.error('mongoose.connect => ' + e.message));
+
+// morgan-body req and res logging
+morganBody(app, morganOptions);
 
 // routes
 const commonRouter = require('./routes/common.js');

@@ -1,4 +1,4 @@
-const logger = require('./logger');
+const { logger } = require('./logger');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 const LocalStrategy = require('passport-local');

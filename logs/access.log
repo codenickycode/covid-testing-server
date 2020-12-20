@@ -1,0 +1,124 @@
+::1 - POST /common/register HTTP/1.1 400 24 - 75.503 ms
+::1 - POST /common/register HTTP/1.1 400 24 - 63.162 ms
+POST /common/register   -  ms
+function morgan (format, options) {
+  var fmt = format
+  var opts = options || {}
+
+  if (format && typeof format === 'object') {
+    opts = format
+    fmt = opts.format || 'default'
+
+    // smart deprecation message
+    deprecate('morgan(options): use morgan(' + (typeof fmt === 'string' ? JSON.stringify(fmt) : 'format') + ', options) instead')
+  }
+
+  if (fmt === undefined) {
+    deprecate('undefined format: specify a format')
+  }
+
+  // output on request instead of response
+  var immediate = opts.immediate
+
+  // check if log entry should be skipped
+  var skip = opts.skip || false
+
+  // format function
+  var formatLine = typeof fmt !== 'function'
+    ? getFormatFunction(fmt)
+    : fmt
+
+  // stream
+  var buffer = opts.buffer
+  var stream = opts.stream || process.stdout
+
+  // buffering support
+  if (buffer) {
+    deprecate('buffer option')
+
+    // flush interval
+    var interval = typeof buffer !== 'number'
+      ? DEFAULT_BUFFER_DURATION
+      : buffer
+
+    // swap the stream
+    stream = createBufferStream(stream, interval)
+  }
+
+  return function logger (req, res, next) {
+    // request data
+    req._startAt = undefined
+    req._startTime = undefined
+    req._remoteAddress = getip(req)
+
+    // response data
+    res._startAt = undefined
+    res._startTime = undefined
+
+    // record request start
+    recordStartTime.call(req)
+
+    function logRequest () {
+      if (skip !== false && skip(req, res)) {
+        debug('skip request')
+        return
+      }
+
+      var line = formatLine(morgan, req, res)
+
+      if (line == null) {
+        debug('skip line')
+        return
+      }
+
+      debug('log request')
+      stream.write(line + '\n')
+    };
+
+    if (immediate) {
+      // immediate log
+      logRequest()
+    } else {
+      // record response start
+      onHeaders(res, recordStartTime)
+
+      // log when response finished
+      onFinished(res, logRequest)
+    }
+
+    next()
+  }
+}
+[object Object]
+[object Object]
+[object Object]
+[object Object]
+{"role":"provider","email":"susieqasd@gmail.com","password":"securepassword"}
+undefined
+::1 - - [Sun, 20 Dec 2020 17:40:01 GMT] "POST /common/register HTTP/1.1" 400 24 "-" "insomnia/2020.5.2"
+{"role":"provider","email":"susieqasd@gmail.com","password":"securepassword"}
+[object Object]
+::1 - - [20/Dec/2020:17:42:27 +0000] "POST /common/register HTTP/1.1" 400 24 "-" "insomnia/2020.5.2"
+::1 - - [20/Dec/2020:17:47:52 +0000] "POST /common/register" 400 - "-" "insomnia/2020.5.2"
+Request: POST /common/register at Sun Dec 20 2020 13:01:03 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2Request Body:{"role":"provider","email":"susieqasd@gmail.com","password":"securepassword"}Response Body:User already registered.Response: 400 122.655 ms 
+Request: POST /common/register at Sun Dec 20 2020 13:01:25 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+Request Body:
+{
+	"role": "provider",
+	"email": "susieqasd@gmail.com",
+	"password": "securepassword"
+}
+Response Body:
+User already registered.
+Response: 400 73.514 ms 
+
+Request: POST /common/register at Sun Dec 20 2020 13:02:53 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+Request Body:
+{
+	"role": "provider",
+	"email": "susieqasd@gmail.com",
+	"password": "[FILTERED]"
+}
+Response Body:
+User already registered.
+Response: 400 109.370 ms 

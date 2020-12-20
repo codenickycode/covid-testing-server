@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const passportLocalMongoose = require('passport-local-mongoose');
 
 const Location = new Schema({
   name: String,
@@ -25,7 +24,5 @@ const Location = new Schema({
   ],
   tests: [String],
 });
-
-Location.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('location', Location);
