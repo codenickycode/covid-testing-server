@@ -1,0 +1,10 @@
+2020-12-21T14:55:47.173Z info: 	Server is running on port: 3000
+2020-12-21T14:55:47.474Z info: 	Connected to database.
+2020-12-21T14:55:49.812Z info: 	Request: POST /common/register at Mon Dec 21 2020 09:55:49 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T14:55:50.384Z info: 	Request Body:{"role":"provider","email":"susd@gmail.com","password":"[FILTERED]"}
+2020-12-21T14:55:50.386Z info: 	Response Body:Success! You are now logged in.
+2020-12-21T14:55:50.389Z info: 	Response: 200 557.787 ms 
+2020-12-21T14:57:11.761Z info: 	Request: POST /common/register at Mon Dec 21 2020 09:57:11 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T14:57:11.779Z info: 	Request Body:{"role":"provider","email":"susd@gmail.com","password":"[FILTERED]"}
+2020-12-21T14:57:11.779Z info: 	Response Body:User already registered.
+2020-12-21T14:57:11.780Z info: 	Response: 400 15.349 ms 

@@ -1,0 +1,20 @@
+2020-12-21T03:16:34.287Z info: 	Server is running on port: 3000
+2020-12-21T03:16:34.289Z error: 	mongoose.connect => The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2020-12-21T03:30:16.059Z info: 	Server is running on port: 3000
+2020-12-21T03:30:16.433Z error: 	mongoose.connect => bad auth : Authentication failed.
+2020-12-21T03:34:34.147Z info: 	Server is running on port: 3000
+2020-12-21T03:34:34.448Z info: 	Connected to database.
+2020-12-21T03:36:46.936Z info: 	Server is running on port: 3000
+2020-12-21T03:36:47.248Z info: 	Connected to database.
+2020-12-21T03:37:13.264Z info: 	Request: POST /common/register at Sun Dec 20 2020 22:37:13 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T03:37:16.589Z info: 	Request Body:{"role":"provider","email":"susieqasd@gmail.com","password":"[FILTERED]"}
+2020-12-21T03:37:16.593Z info: 	Response: - - ms 
+2020-12-21T03:37:37.702Z info: 	Request: POST /common/register at Sun Dec 20 2020 22:37:37 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T03:37:38.027Z info: 	Request Body:{"role":"provider","email":"susd@gmail.com","password":"[FILTERED]"}
+2020-12-21T03:37:38.028Z info: 	Response Body:Success! You are now logged in.
+2020-12-21T03:37:38.029Z info: 	Response: 200 320.305 ms 
+2020-12-21T03:38:09.934Z info: 	Request: POST /common/register at Sun Dec 20 2020 22:38:09 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T03:38:21.917Z info: 	Request Body:{"role":"provider","email":"susd@gmail.com","password":"[FILTERED]"}
+2020-12-21T03:38:21.919Z info: 	Response: - - ms 
+2020-12-21T03:38:52.367Z info: 	Server is running on port: 3000
+2020-12-21T03:38:52.690Z info: 	Connected to database.
