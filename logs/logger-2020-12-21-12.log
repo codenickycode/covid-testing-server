@@ -1,0 +1,34 @@
+2020-12-21T17:48:10.453Z info: 	Server is running on port: 3000
+2020-12-21T17:48:10.766Z info: 	Connected to database.
+2020-12-21T17:48:13.587Z info: 	Request: POST /common/register at Mon Dec 21 2020 12:48:13 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T17:48:14.129Z info: 	Request Body:{"role":"client","email":"nicky@gmail.com.com","password":"[FILTERED]"}
+2020-12-21T17:48:14.130Z info: 	Response Body:Success! You are now logged in.
+2020-12-21T17:48:14.131Z info: 	Response: 200 535.668 ms 
+2020-12-21T17:49:43.640Z info: 	Request: GET /common/appointments at Mon Dec 21 2020 12:49:43 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T17:49:43.660Z info: 	Request Body:{"client":"5fe0dfde0ae4cbdd779231ae"}
+2020-12-21T17:49:43.661Z info: 	Response: 200 16.106 ms 
+2020-12-21T17:50:01.921Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 12:50:01 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T17:50:02.046Z info: 	Request Body:{"client":"5fe0dfde0ae4cbdd779231ae","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/25/2024","time":"5:44 PM","location":"5fd7bb8fdb38d612a8f04f8d","test":"PCR"}
+2020-12-21T17:50:02.047Z info: 	Response Body:{"role":"client","travel":[],"_id":"5fe0dfde0ae4cbdd779231ae","email":"nicky@gmail.com.com","password":"[FILTERED]","appointments":[{"_id":"5fe0e04a0ae4cbdd779231b0","date":"5/25/2024","time":"5:44 PM","location":"5fd7bb8fdb38d612a8f04f8d","name":"Newest Location","address":{"street":"12 Updated Ln","city":"Updatedville","state":"MA","zip":12345},"phone":"(555)555-5555","test":"PCR","confirmation":"5fe0e0490ae4cbdd779231af"}],"__v":1}
+2020-12-21T17:50:02.047Z info: 	Response: 200 122.972 ms 
+2020-12-21T17:51:30.837Z info: 	Request: GET /common/appointments at Mon Dec 21 2020 12:51:30 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T17:51:30.860Z info: 	Request Body:{"client":"5fe0dfde0ae4cbdd779231ae"}
+2020-12-21T17:51:30.862Z info: 	Response Body:[{"address":{"street":"12 Updated Ln","city":"Updatedville","state":"MA","zip":12345},"_id":"5fe0e04a0ae4cbdd779231b0","date":"5/25/2024","time":"5:44 PM","location":"5fd7bb8fdb38d612a8f04f8d","name":"Newest Location","phone":"(555)555-5555","test":"PCR","confirmation":"5fe0e0490ae4cbdd779231af"}]
+2020-12-21T17:51:30.862Z info: 	Response: 200 21.003 ms 
+2020-12-21T17:51:48.232Z info: 	Request: DELETE /common/appointments at Mon Dec 21 2020 12:51:48 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T17:51:48.247Z error: 	deleteAppointment => 
+ Error: Location not found
+    at deleteAppointment (/home/nick/WebProjects/covid-testing-server/routes/reqs/deleteAppointment.js:20:28)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+2020-12-21T17:51:48.248Z info: 	Request Body:{"client":"5fdb8a5b40c3d320182b72d0","location":"5fe0dfde0ae4cbdd779231ae","confirmation":"5fdb8c48e2fd313028466673"}
+2020-12-21T17:51:48.248Z info: 	Response Body:An error occurred. Please try again later.
+2020-12-21T17:51:48.249Z info: 	Response: 500 14.869 ms 
+2020-12-21T17:52:31.153Z info: 	Request: DELETE /common/appointments at Mon Dec 21 2020 12:52:31 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T17:52:31.172Z error: 	deleteAppointment => 
+ ReferenceError: confirmation is not defined
+    at dbDelete (/home/nick/WebProjects/covid-testing-server/routes/reqs/deleteAppointment.js:8:33)
+    at deleteAppointment (/home/nick/WebProjects/covid-testing-server/routes/reqs/deleteAppointment.js:21:21)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+2020-12-21T17:52:31.174Z info: 	Request Body:{"client":"5fe0dfde0ae4cbdd779231ae","location":"5fd7bb8fdb38d612a8f04f8d","confirmation":"5fdb8c48e2fd313028466673"}
+2020-12-21T17:52:31.175Z info: 	Response Body:An error occurred. Please try again later.
+2020-12-21T17:52:31.175Z info: 	Response: 500 19.138 ms 

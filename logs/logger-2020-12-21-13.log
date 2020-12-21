@@ -1,0 +1,125 @@
+2020-12-21T18:00:12.172Z info: 	Server is running on port: 3000
+2020-12-21T18:00:12.501Z info: 	Connected to database.
+2020-12-21T18:00:28.191Z info: 	Server is running on port: 3000
+2020-12-21T18:00:28.440Z info: 	Connected to database.
+2020-12-21T18:03:21.357Z info: 	Server is running on port: 3000
+2020-12-21T18:03:21.680Z info: 	Connected to database.
+2020-12-21T18:05:02.724Z info: 	Server is running on port: 3000
+2020-12-21T18:05:03.054Z info: 	Connected to database.
+2020-12-21T18:05:35.167Z info: 	Server is running on port: 3000
+2020-12-21T18:05:35.416Z info: 	Connected to database.
+2020-12-21T18:06:05.111Z info: 	Request: POST /common/register at Mon Dec 21 2020 13:06:05 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:06:05.430Z info: 	Request Body:{"role":"client","email":"nicky@gmail.com","password":"[FILTERED]"}
+2020-12-21T18:06:05.430Z info: 	Response Body:Success! You are now logged in.
+2020-12-21T18:06:05.431Z info: 	Response: 200 313.586 ms 
+2020-12-21T18:06:13.483Z info: 	Request: GET /common/logout at Mon Dec 21 2020 13:06:13 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:06:13.490Z info: 	Response: 302 5.692 ms 
+2020-12-21T18:06:13.492Z info: 	Request: GET / at Mon Dec 21 2020 13:06:13 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:06:13.494Z info: 	Response: 404 1.597 ms 
+2020-12-21T18:06:26.312Z info: 	Request: POST /common/login at Mon Dec 21 2020 13:06:26 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:06:26.330Z info: 	nicky@gmail.com attempted to log in.
+2020-12-21T18:06:26.582Z info: 	Request Body:{"email":"nicky@gmail.com","password":"[FILTERED]"}
+2020-12-21T18:06:26.582Z info: 	Response Body:success
+2020-12-21T18:06:26.582Z info: 	Response: 200 269.057 ms 
+2020-12-21T18:07:28.886Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:07:28 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:07:28.999Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/25/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:07:29.000Z info: 	Response Body:{"role":"client","travel":[],"_id":"5fe0e40d2d32c8e2c2b0a58e","email":"nicky@gmail.com","password":"[FILTERED]","appointments":[{"_id":"5fe0e4602d32c8e2c2b0a58f","date":"5/25/2024","time":"5:44 PM","test":"PCR","name":"Newer Location","phone":"(555)555-5555","address":{"street":"12 Updated Ln","city":"Updatedville","state":"MA","zip":12345}}],"__v":1}
+2020-12-21T18:07:29.001Z info: 	Response: 200 112.475 ms 
+2020-12-21T18:08:26.406Z info: 	Request: DELETE /common/appointments at Mon Dec 21 2020 13:08:26 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:08:26.421Z error: 	deleteAppointment => 
+ Error: Invalid confirmation number: Location
+    at deleteAppointment (/home/nick/WebProjects/covid-testing-server/routes/reqs/deleteAppointment.js:22:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+2020-12-21T18:08:26.423Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","location":"5fdb8c61e2fd313028466675","_id":"5fdb8c48e2fd313028466673"}
+2020-12-21T18:08:26.424Z info: 	Response Body:An error occurred. Please try again later.
+2020-12-21T18:08:26.425Z info: 	Response: 500 15.876 ms 
+2020-12-21T18:08:39.397Z info: 	Request: DELETE /common/appointments at Mon Dec 21 2020 13:08:39 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:08:39.461Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","location":"5fdb8c61e2fd313028466675","_id":"5fe0e4602d32c8e2c2b0a58f"}
+2020-12-21T18:08:39.461Z info: 	Response Body:{"role":"client","travel":[],"_id":"5fe0e40d2d32c8e2c2b0a58e","email":"nicky@gmail.com","password":"[FILTERED]","appointments":[],"__v":2}
+2020-12-21T18:08:39.462Z info: 	Response: 200 62.479 ms 
+2020-12-21T18:09:42.548Z info: 	Request: GET /common/appointments at Mon Dec 21 2020 13:09:42 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:09:42.573Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e"}
+2020-12-21T18:09:42.574Z info: 	Response: 200 24.261 ms 
+2020-12-21T18:14:32.847Z info: 	Server is running on port: 3000
+2020-12-21T18:14:33.141Z info: 	Connected to database.
+2020-12-21T18:14:33.143Z error: 	mongoose.connect => write EIO
+2020-12-21T18:17:23.744Z info: 	Server is running on port: 3000
+2020-12-21T18:17:24.086Z info: 	Connected to database.
+2020-12-21T18:20:50.108Z info: 	Server is running on port: 3000
+2020-12-21T18:20:50.404Z info: 	Connected to database.
+2020-12-21T18:21:00.176Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:21:00 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:21:00.185Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/26/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:21:00.186Z info: 	Response Body:unsuccessful
+2020-12-21T18:21:00.187Z info: 	Response: 401 3.639 ms 
+2020-12-21T18:21:06.315Z info: 	Request: POST /common/login at Mon Dec 21 2020 13:21:06 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:21:06.350Z info: 	nicky@gmail.com attempted to log in.
+2020-12-21T18:21:06.604Z info: 	Request Body:{"email":"nicky@gmail.com","password":"[FILTERED]"}
+2020-12-21T18:21:06.605Z info: 	Response Body:success
+2020-12-21T18:21:06.605Z info: 	Response: 200 287.786 ms 
+2020-12-21T18:21:10.459Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:21:10 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:21:10.573Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/26/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:21:10.573Z info: 	Response Body:{"role":"client","travel":[],"_id":"5fe0e40d2d32c8e2c2b0a58e","email":"nicky@gmail.com","password":"[FILTERED]","appointments":[{"_id":"5fe0e796ed2e24ea495cf008","name":"Nick Carbone","phone":"654-654-6549","date":"5/26/2024","time":"5:44 PM","test":"PCR"}],"__v":3}
+2020-12-21T18:21:10.574Z info: 	Response: 200 112.143 ms 
+2020-12-21T18:21:42.748Z info: 	Server is running on port: 3000
+2020-12-21T18:21:43.004Z info: 	Connected to database.
+2020-12-21T18:21:51.587Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:21:51 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:21:51.596Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/27/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:21:51.596Z info: 	Response Body:unsuccessful
+2020-12-21T18:21:51.597Z info: 	Response: 401 4.027 ms 
+2020-12-21T18:21:57.075Z info: 	Request: POST /common/login at Mon Dec 21 2020 13:21:57 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:21:57.112Z info: 	nicky@gmail.com attempted to log in.
+2020-12-21T18:21:57.365Z info: 	Request Body:{"email":"nicky@gmail.com","password":"[FILTERED]"}
+2020-12-21T18:21:57.366Z info: 	Response Body:success
+2020-12-21T18:21:57.366Z info: 	Response: 200 288.769 ms 
+2020-12-21T18:22:01.926Z info: 	Request: GET /common at Mon Dec 21 2020 13:22:01 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:22:01.961Z info: 	Request Body:{"client":"5fdb901f69946c21c01f5248"}
+2020-12-21T18:22:01.961Z info: 	Response Body:null
+2020-12-21T18:22:01.962Z info: 	Response: 200 33.053 ms 
+2020-12-21T18:22:13.394Z info: 	Request: GET /common at Mon Dec 21 2020 13:22:13 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:22:13.415Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e"}
+2020-12-21T18:22:13.416Z info: 	Response Body:{"role":"client","travel":[],"_id":"5fe0e40d2d32c8e2c2b0a58e","email":"nicky@gmail.com","password":"[FILTERED]","appointments":[{"_id":"5fe0e796ed2e24ea495cf008","name":"Nick Carbone","phone":"654-654-6549","date":"5/26/2024","time":"5:44 PM","test":"PCR"}],"__v":3}
+2020-12-21T18:22:13.416Z info: 	Response: 200 18.106 ms 
+2020-12-21T18:22:22.232Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:22:22 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:22:22.258Z error: 	addAppointment => 
+ ReferenceError: date is not defined
+    at addAppointment (/home/nick/WebProjects/covid-testing-server/routes/reqs/addAppointment.js:13:25)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+2020-12-21T18:22:22.260Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/27/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:22:22.260Z info: 	Response Body:An error occurred. Please try again later.
+2020-12-21T18:22:22.261Z info: 	Response: 500 26.907 ms 
+2020-12-21T18:24:28.097Z info: 	Server is running on port: 3000
+2020-12-21T18:24:28.398Z info: 	Connected to database.
+2020-12-21T18:24:32.420Z info: 	Request: POST /common/login at Mon Dec 21 2020 13:24:32 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:24:32.457Z info: 	nicky@gmail.com attempted to log in.
+2020-12-21T18:24:32.723Z info: 	Request Body:{"email":"nicky@gmail.com","password":"[FILTERED]"}
+2020-12-21T18:24:32.724Z info: 	Response Body:success
+2020-12-21T18:24:32.725Z info: 	Response: 200 298.589 ms 
+2020-12-21T18:24:37.288Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:24:37 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:24:37.409Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/27/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:24:37.411Z info: 	Response Body:{"role":"client","travel":[],"_id":"5fe0e40d2d32c8e2c2b0a58e","email":"nicky@gmail.com","password":"[FILTERED]","appointments":[{"_id":"5fe0e865d5e1c5ec936bcb21","name":"Nick Carbone","phone":"654-654-6549","date":"5/27/2024","time":"5:44 PM","test":"PCR"},{"_id":"5fe0e796ed2e24ea495cf008","name":"Nick Carbone","phone":"654-654-6549","date":"5/26/2024","time":"5:44 PM","test":"PCR"}],"__v":4}
+2020-12-21T18:24:37.413Z info: 	Response: 200 115.911 ms 
+2020-12-21T18:24:49.695Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:24:49 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:24:49.713Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/27/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:24:49.713Z info: 	Response Body:Appointment unavailable. Please choose another time.
+2020-12-21T18:24:49.714Z info: 	Response: 200 16.941 ms 
+2020-12-21T18:27:49.081Z info: 	Server is running on port: 3000
+2020-12-21T18:27:49.434Z info: 	Connected to database.
+2020-12-21T18:27:55.979Z info: 	Request: POST /common/login at Mon Dec 21 2020 13:27:55 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:27:56.015Z info: 	nicky@gmail.com attempted to log in.
+2020-12-21T18:27:56.281Z info: 	Request Body:{"email":"nicky@gmail.com","password":"[FILTERED]"}
+2020-12-21T18:27:56.282Z info: 	Response Body:success
+2020-12-21T18:27:56.282Z info: 	Response: 200 298.739 ms 
+2020-12-21T18:27:58.542Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:27:58 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:27:58.566Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/27/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:27:58.566Z info: 	Response Body:Appointment unavailable. Please choose another time.
+2020-12-21T18:27:58.567Z info: 	Response: 200 22.831 ms 
+2020-12-21T18:28:05.160Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:28:05 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:28:05.275Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/28/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:28:05.276Z info: 	Response Body:{"role":"client","travel":[],"_id":"5fe0e40d2d32c8e2c2b0a58e","email":"nicky@gmail.com","password":"[FILTERED]","appointments":[{"_id":"5fe0e93531e5f0edc4da06c7","name":"Newer Location","phone":"(555)555-5555","date":"5/28/2024","time":"5:44 PM","test":"PCR","address":{"street":"12 Updated Ln","city":"Updatedville","state":"MA","zip":12345}},{"_id":"5fe0e865d5e1c5ec936bcb21","name":"Nick Carbone","phone":"654-654-6549","date":"5/27/2024","time":"5:44 PM","test":"PCR"},{"_id":"5fe0e796ed2e24ea495cf008","name":"Nick Carbone","phone":"654-654-6549","date":"5/26/2024","time":"5:44 PM","test":"PCR"}],"__v":5}
+2020-12-21T18:28:05.277Z info: 	Response: 200 112.549 ms 
+2020-12-21T18:28:34.105Z info: 	Request: POST /common/appointments at Mon Dec 21 2020 13:28:34 GMT-0500, IP: ::1, User Agent: insomnia/2020.5.2
+2020-12-21T18:28:34.127Z info: 	Request Body:{"client":"5fe0e40d2d32c8e2c2b0a58e","name":"Nick Carbone","dob":"5/19/1986","phone":"654-654-6549","date":"5/28/2024","time":"5:44 PM","location":"5fdb8c61e2fd313028466675","test":"PCR"}
+2020-12-21T18:28:34.127Z info: 	Response Body:Appointment unavailable. Please choose another time.
+2020-12-21T18:28:34.128Z info: 	Response: 200 20.115 ms 
+2020-12-21T18:31:57.135Z info: 	Server is running on port: 3000
+2020-12-21T18:31:57.458Z info: 	Connected to database.
