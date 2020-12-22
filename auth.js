@@ -10,10 +10,10 @@ module.exports = () => {
   passport.use(
     'local',
     new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
-      User.findOne({ email }, (err, user) => {
-        logger.info(email + ' attempted to log in.');
-        if (err) {
-          return done(err);
+      User.findOne({ email }, (e, user) => {
+        if (e) {
+          logger.error(`auth.js Passport Local => ${e.stack}`);
+          return done(e);
         }
         if (!user) {
           return done(null, false);
@@ -32,7 +32,7 @@ module.exports = () => {
 
   passport.deserializeUser((req, id, done) => {
     User.findOne({ _id: new ObjectID(id) }, (e, doc) => {
-      if (e) logger.error(e.message);
+      if (e) logger.error(`auth.js Passport deserialize => ${e.stack}`);
       done(null, doc);
     });
   });

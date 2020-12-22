@@ -22,23 +22,6 @@ const User = new Schema({
     relation: String,
   },
   travel: [],
-  appointments: [
-    {
-      date: String,
-      time: String,
-      location: String,
-      name: String,
-      address: {
-        street: String,
-        city: String,
-        state: String,
-        zip: Number,
-      },
-      phone: String,
-      test: String,
-      confirmation: String,
-    },
-  ],
 });
 
 module.exports = mongoose.model('user', User);

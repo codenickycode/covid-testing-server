@@ -1,34 +1,28 @@
-const { logger } = require('../../logger');
 const { ObjectId } = require('mongodb');
-const User = require('../../models/User.model.js');
-const Location = require('../../models/Location.model.js');
+const { logger } = require('../../logger');
+const Appointment = require('../../models/Appointment.model.js');
 
 const addAppointment = async (req, res) => {
   try {
-    const { location, ...newAppointment } = req.body;
-    const dbLocation = await Location.findById(location);
-    if (!dbLocation) throw new Error('Location not found');
-    for (let appt of dbLocation.appointments) {
-      if (
-        appt.date === newAppointment.date &&
-        appt.time === newAppointment.time
-      ) {
-        return res.send('Appointment unavailable. Please choose another time.');
+    const { location, date, time, test } = req.body;
+    const appointments = await Appointment.find({ location, date }).exec();
+    for (let appt of appointments) {
+      if (appt.time === time) {
+        return res
+          .status(400)
+          .send('Appointment unavailable. Please choose another time.');
       }
     }
-    newAppointment._id = new ObjectId();
-    dbLocation.appointments.unshift(newAppointment);
-    await dbLocation.save();
-    // adjust newAppointment for client's document
-    let { client, dob, ...clientAppointment } = newAppointment;
-    clientAppointment.name = dbLocation.name;
-    clientAppointment.address = dbLocation.address;
-    clientAppointment.phone = dbLocation.phone;
-    let dbClient = await User.findById(client);
-    if (!dbClient) throw new Error('Client not found');
-    dbClient.appointments.unshift(clientAppointment);
-    const updatedClient = await dbClient.save();
-    return res.json(updatedClient);
+    let newAppointment = new Appointment({
+      _id: new ObjectId(),
+      date,
+      time,
+      location,
+      client: req.user._id,
+      test,
+    });
+    await newAppointment.save();
+    return res.status(200).send('Success!');
   } catch (e) {
     logger.error(`addAppointment => \n ${e.stack}`);
     return res.status(500).send('An error occurred. Please try again later.');

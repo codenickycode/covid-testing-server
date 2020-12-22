@@ -52,7 +52,7 @@ const morganOptions = {
   prettify: false,
   noColors: true,
   includeNewLine: false,
-  filterParameters: ['password'],
+  filterParameters: ['password', 'currentPassword', 'newPassword'],
 };
 /************************************************/
 
