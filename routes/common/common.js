@@ -18,29 +18,23 @@ router.route('/logout').get((req, res) => {
 });
 
 // return all locations
-router.route('/locations').get((req, res) => reqs.getLocations(req, res));
+router.route('/locations').get(reqs.getLocations);
 
 // register new user
-router
-  .route('/register')
-  .post(regLimiter, (req, res) => reqs.registerPost(req, res));
+router.route('/register').post(regLimiter, reqs.registerUser);
 
 // get, add, and delete user appointments
 router
   .route('/appointments')
-  .get(ensureAuthenticated, (req, res) => reqs.getAppointments(req, res))
-  .post(ensureAuthenticated, (req, res) => reqs.addAppointment(req, res))
-  .delete(ensureAuthenticated, (req, res) => reqs.deleteAppointment(req, res));
+  .get(ensureAuthenticated, reqs.getAppointments)
+  .post(ensureAuthenticated, reqs.addAppointment)
+  .delete(ensureAuthenticated, reqs.deleteAppointment);
 
 // update user profile
-router
-  .route('/update/:type')
-  .post(ensureAuthenticated, (req, res) => reqs.updateProfile(req, res));
+router.route('/update/:type').post(ensureAuthenticated, reqs.updateProfile);
 
 // get user document
-router
-  .route('/')
-  .get(ensureAuthenticated, (req, res) => reqs.getClient(req, res));
+router.route('/').get(ensureAuthenticated, reqs.getClient);
 
 // catch all invalid endpoints
 router.use((req, res, next) => {

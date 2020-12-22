@@ -9,22 +9,16 @@ const authorize = (req, res, next) => {
 };
 
 // return all Users
-router
-  .route('/users')
-  .get(ensureAuthenticated, authorize, (req, res) => reqs.getUsers(req, res));
+router.route('/users').get(ensureAuthenticated, authorize, reqs.getUsers);
 
 // add a location
 router
   .route('/locations/new')
-  .post(ensureAuthenticated, authorize, (req, res) =>
-    reqs.newLocation(req, res)
-  );
+  .post(ensureAuthenticated, authorize, reqs.newLocation);
 
 // update a location
 router
   .route('/locations/update/:type')
-  .post(ensureAuthenticated, authorize, (req, res) =>
-    reqs.updateLocation(req, res)
-  );
+  .post(ensureAuthenticated, authorize, reqs.updateLocation);
 
 module.exports = router;

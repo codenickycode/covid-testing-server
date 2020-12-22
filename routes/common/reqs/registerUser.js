@@ -4,12 +4,12 @@ const User = require('../../../models/User.model.js');
 const sanitize = require('../../../tools/sanitize.js');
 const validPassword = require('../../../tools/validPassword');
 
-const registerPost = async (req, res) => {
+const registerUser = async (req, res) => {
   try {
     const request = sanitize(req.body);
     const { role, email, password } = request;
-    const valid = validPassword(password);
-    if (!valid) return res.status(400).send('Invalid password.');
+    if (!validPassword(password))
+      return res.status(400).send('Invalid password.');
     const registered = await User.findOne({ email }).exec();
     if (registered) return res.status(400).send('User already registered.');
     const hash = bcrypt.hashSync(password, 12);
@@ -20,9 +20,9 @@ const registerPost = async (req, res) => {
       return res.status(200).send('Success! You are now logged in.');
     });
   } catch (e) {
-    logger.error(`registerPost => \n ${e.stack}`);
+    logger.error(`registerUser => \n ${e.stack}`);
     return res.status(500).send('An error occurred. Please try again later.');
   }
 };
 
-module.exports = registerPost;
+module.exports = registerUser;

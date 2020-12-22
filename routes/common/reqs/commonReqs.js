@@ -1,4 +1,4 @@
-exports.registerPost = require('./registerPost.js');
+exports.registerUser = require('./registerUser.js');
 exports.getAppointments = require('./getAppointments.js');
 exports.addAppointment = require('./addAppointment.js');
 exports.deleteAppointment = require('./deleteAppointment.js');

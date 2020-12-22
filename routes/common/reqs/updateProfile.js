@@ -37,8 +37,8 @@ const updateProfile = async (req, res) => {
         const newPassword = request.newPassword;
         let correct = await bcrypt.compare(currentPassword, req.user.password);
         if (!correct) return res.status(400).send('Incorrect current password');
-        const valid = validPassword(newPassword);
-        if (!valid) return res.status(400).send('Invalid password.');
+        if (!validPassword(newPassword))
+          return res.status(400).send('Invalid password.');
         const hash = bcrypt.hashSync(newPassword, 12);
         dbClient.password = hash;
         break;
