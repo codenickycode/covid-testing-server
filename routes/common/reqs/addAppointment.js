@@ -1,6 +1,6 @@
 const { ObjectId } = require('mongodb');
-const { logger } = require('../../logger');
-const Appointment = require('../../models/Appointment.model.js');
+const { logger } = require('../../../logger');
+const Appointment = require('../../../models/Appointment.model.js');
 
 const addAppointment = async (req, res) => {
   try {

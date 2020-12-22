@@ -1,5 +1,5 @@
-const { logger } = require('../../logger');
-const Appointment = require('../../models/Appointment.model');
+const { logger } = require('../../../logger');
+const Appointment = require('../../../models/Appointment.model');
 
 const deleteAppointment = async (req, res) => {
   Appointment.findByIdAndDelete(req.body._id, (e, appt) => {

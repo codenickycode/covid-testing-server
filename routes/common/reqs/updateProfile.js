@@ -1,24 +1,28 @@
-const { logger } = require('../../logger');
+const { logger } = require('../../../logger');
 const bcrypt = require('bcrypt');
-const createTruthyObject = require('../../tools/createTruthyObject.js');
-const User = require('../../models/User.model.js');
-const { registeredEmail, validPassword } = require('../../tools/checks');
+const createTruthyObject = require('../../../tools/createTruthyObject.js');
+const sanitize = require('../../../tools/sanitize');
+const validPassword = require('../../../tools/validPassword');
+const User = require('../../../models/User.model.js');
 
 const updateProfile = async (req, res) => {
   try {
     const client = req.user._id;
     const type = req.params.type;
     // parse request, include only values to be updated
-    let request = createTruthyObject(req.body);
+    let dirtyReq = createTruthyObject(req.body);
+    let request = sanitize(dirtyReq);
     let dbClient = await User.findById(client);
     if (!dbClient) throw new Error('Client not found');
     switch (type) {
       case 'insurance':
       case 'basic':
         if (request.email) {
-          const registered = await registeredEmail(request.email);
+          const registered = await User.findOne({
+            email: request.email,
+          }).exec();
           if (registered)
-            return res.status(400).send('Email address is taken.');
+            return res.status(400).send('Email address unavailable.');
         }
         for (let [key, val] of Object.entries(request)) {
           if (val) dbClient[key] = val;

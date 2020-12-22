@@ -1,13 +1,14 @@
-const createTruthyObject = require('../../tools/createTruthyObject.js');
-const Location = require('../../models/Location.model.js');
+const { logger } = require('../../../logger');
+const createTruthyObject = require('../../../tools/createTruthyObject');
+const sanitize = require('../../../tools/sanitize');
+const Location = require('../../../models/Location.model.js');
 
 const updateLocation = async (req, res) => {
   try {
-    if (req.user.role !== 'provider')
-      return res.status(403).send('unauthorized');
     const type = req.params.type;
     // parse location and truthy values from req.body
-    let { location, ...request } = createTruthyObject(req.body);
+    let cleanReq = sanitize(req.body);
+    let { location, ...request } = createTruthyObject(cleanReq);
     const dbLocation = await Location.findById(location);
     switch (type) {
       case 'basic':

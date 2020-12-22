@@ -1,4 +1,4 @@
-const sanitizeMongoose = (request) => {
+const sanitize = (request) => {
   const clean = Object.assign({}, request);
   for (let [k, v] of Object.entries(clean)) {
     if (typeof v === 'string') {
@@ -8,4 +8,4 @@ const sanitizeMongoose = (request) => {
   return clean;
 };
 
-module.exports = sanitizeMongoose;
+module.exports = sanitize;
