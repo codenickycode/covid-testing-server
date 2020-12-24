@@ -29,6 +29,16 @@
             "date": 1608825280729,
             "name": "logs/logger-2020-12-24-10.log",
             "hash": "26bd73a491957d90180e297836ffcad5"
+        },
+        {
+            "date": 1608825638441,
+            "name": "logs/logger-2020-12-24-11.log",
+            "hash": "47d6640b437e18516edfde54da6afa36"
+        },
+        {
+            "date": 1608829223276,
+            "name": "logs/logger-2020-12-24-12.log",
+            "hash": "d119f151e86018c3610b112bef12bd97"
         }
     ]
 }

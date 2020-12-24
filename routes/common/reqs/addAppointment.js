@@ -5,14 +5,11 @@ const Appointment = require('../../../models/Appointment.model.js');
 const addAppointment = async (req, res) => {
   try {
     const { location, date, time, test } = req.body;
-    const appointments = await Appointment.find({ location, date }).exec();
-    for (let appt of appointments) {
-      if (appt.time === time) {
-        return res
-          .status(400)
-          .send('Appointment unavailable. Please choose another time.');
-      }
-    }
+    const appointment = await Appointment.find({ location, date, time }).exec();
+    if (appointment)
+      return res
+        .status(400)
+        .send('Appointment unavailable. Please choose another time.');
     let newAppointment = new Appointment({
       _id: new ObjectId(),
       date,
