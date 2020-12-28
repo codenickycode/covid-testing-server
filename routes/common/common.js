@@ -33,9 +33,6 @@ router
   .post(ensureAuthenticated, reqs.addAppointment)
   .delete(ensureAuthenticated, reqs.deleteAppointment);
 
-// get all appointments
-router.route('/appointments/all').get(reqs.getAllAppointments);
-
 // update user profile
 router.route('/update/:type').post(ensureAuthenticated, reqs.updateProfile);
 

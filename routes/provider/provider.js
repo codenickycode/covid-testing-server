@@ -8,6 +8,11 @@ const authorize = (req, res, next) => {
   return next();
 };
 
+// get all appointments
+router
+  .route('/appointments')
+  .get(ensureAuthenticated, authorize, reqs.getAllAppointments);
+
 // return all Users
 router.route('/users').get(ensureAuthenticated, authorize, reqs.getUsers);
 
