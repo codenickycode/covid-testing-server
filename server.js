@@ -30,7 +30,8 @@ app.use(passport.session());
 
 // connect to db
 mongoose
-  .connect(process.env.DB_URI, {
+  //process.env.DB_URI
+  .connect('mongodb://localhost:27017', {
     useUnifiedTopology: true, // fix deprecated mongo stuff
     useNewUrlParser: true,
     useCreateIndex: true,
