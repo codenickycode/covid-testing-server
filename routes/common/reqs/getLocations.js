@@ -24,8 +24,8 @@ const getDistance = async (zip, locationZips, locations) => {
   const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${zip}&destinations=${locationZips}&key=${process.env.MAPS_API}`;
   const distanceData = await axios.get(url);
   const distance = distanceData.data.rows[0].elements;
-  locations.forEach((location, index) => {
-    location.distance = distance[index].distance.value;
+  locations.forEach((location, i) => {
+    location.distance = distance[i].distance.value;
   });
   return locations;
 };

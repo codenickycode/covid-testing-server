@@ -19,6 +19,7 @@ const Location = new Schema({
   },
   tests: [String],
   appointments: [Appointment],
+  distance: Number,
 });
 
 module.exports = mongoose.model('location', Location);
