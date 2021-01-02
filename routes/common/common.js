@@ -20,6 +20,9 @@ router.route('/logout').get((req, res) => {
 // return all locations
 router.route('/locations').get(reqs.getLocations);
 
+// add distance from origin to all locations
+router.route('/distances').post(reqs.getDistances);
+
 // register new user
 router.route('/register').post(regLimiter, reqs.registerUser);
 
