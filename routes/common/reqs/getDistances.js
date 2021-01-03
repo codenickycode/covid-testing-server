@@ -7,6 +7,8 @@ const getDistances = async (req, res) => {
     const { zip, locationsZips, locations } = req.body;
     const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${zip}&destinations=${locationsZips}&key=${process.env.MAPS_API}`;
     const distanceData = await axios.get(url);
+    if (distanceData.data.origin_addresses[0] === '')
+      return res.status(400).send('Invalid zip code.');
     const distances = distanceData.data.rows[0].elements;
     locations.forEach((location, i) => {
       location.distance = distances[i].distance.value;
