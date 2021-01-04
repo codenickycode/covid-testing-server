@@ -5,9 +5,8 @@ const Location = require('../../../models/Location.model.js');
 
 const addAppointment = async (req, res) => {
   try {
-    const { location, date, time, test } = req.body;
+    const { location, date, time, tests } = req.body;
     const appointment = await Appointment.find({ location, date, time }).exec();
-    console.log(appointment);
     if (appointment[0])
       return res
         .status(400)
@@ -19,7 +18,7 @@ const addAppointment = async (req, res) => {
       time,
       location,
       client: req.user._id,
-      test,
+      tests,
     });
     await newAppointment.save();
     const dbLocation = await Location.findById(location).exec();

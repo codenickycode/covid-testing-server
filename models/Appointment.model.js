@@ -7,7 +7,7 @@ const Appointment = new Schema({
   time: String,
   location: String,
   client: String,
-  test: String,
+  tests: [String],
 });
 
 module.exports = mongoose.model('appointment', Appointment);
