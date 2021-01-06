@@ -17,7 +17,7 @@ const registerUser = async (req, res) => {
     const dbUser = await newUser.save();
     req.login(dbUser, (e) => {
       if (e) throw e;
-      return res.status(200).send('Success! You are now logged in.');
+      return res.status(200).json(dbUser);
     });
   } catch (e) {
     logger.error(`registerUser => \n ${e.stack}`);
