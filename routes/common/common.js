@@ -8,7 +8,7 @@ const { regLimiter } = require('../../rateLimiter');
 router
   .route('/login')
   .post(passport.authenticate('local'), (req, res, next) => {
-    res.status(200).send('Success!');
+    res.status(200).json(req.user);
   });
 
 // user logout
