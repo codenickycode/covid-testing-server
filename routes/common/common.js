@@ -3,12 +3,14 @@ const passport = require('passport');
 const ensureAuthenticated = require('../../tools/ensureAuthenticated.js');
 const reqs = require('./reqs/commonReqs');
 const { regLimiter } = require('../../rateLimiter');
+const cleanUserJson = require('../../tools/cleanUserJson.js');
 
 // user login
 router
   .route('/login')
   .post(passport.authenticate('local'), (req, res, next) => {
-    res.status(200).json(req.user);
+    const response = cleanUserJson(req.user);
+    res.status(200).json(response);
   });
 
 // user logout

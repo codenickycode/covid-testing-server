@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const User = require('../../../models/User.model.js');
 const sanitize = require('../../../tools/sanitize.js');
 const validPassword = require('../../../tools/validPassword');
+const cleanUserJson = require('../../../tools/cleanUserJson.js');
 
 const registerUser = async (req, res) => {
   try {
@@ -17,7 +18,8 @@ const registerUser = async (req, res) => {
     const dbUser = await newUser.save();
     req.login(dbUser, (e) => {
       if (e) throw e;
-      return res.status(200).json(dbUser);
+      const response = cleanUserJson(dbUser);
+      return res.status(200).json(response);
     });
   } catch (e) {
     logger.error(`registerUser => \n ${e.stack}`);
