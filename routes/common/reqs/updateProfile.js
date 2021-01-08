@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const createTruthyObject = require('../../../tools/createTruthyObject.js');
 const sanitize = require('../../../tools/sanitize');
 const validPassword = require('../../../tools/validPassword');
+const cleanUserJson = require('../../../tools/cleanUserJson.js');
 const User = require('../../../models/User.model.js');
 
 const updateProfile = async (req, res) => {
@@ -15,7 +16,10 @@ const updateProfile = async (req, res) => {
     let dbClient = await User.findById(client);
     if (!dbClient) throw new Error('Client not found');
     switch (type) {
-      case 'insurance':
+      case 'name':
+      case 'phone':
+      case 'email':
+      case 'dob':
       case 'basic':
         if (request.email) {
           const registered = await User.findOne({
@@ -28,6 +32,7 @@ const updateProfile = async (req, res) => {
           if (val) dbClient[key] = val;
         }
         break;
+      case 'insurance':
       case 'emergency_contact':
       case 'address':
         dbClient[type] = Object.assign({}, dbClient[type], request);
@@ -48,8 +53,9 @@ const updateProfile = async (req, res) => {
       default:
         throw new Error('Invalid update type');
     }
-    const updatedClient = await dbClient.save();
-    return res.status(200).json(updatedClient);
+    const dirtyClient = await dbClient.save();
+    const cleanClient = cleanUserJson(dirtyClient);
+    return res.status(200).json(cleanClient);
   } catch (e) {
     logger.error(`updateProfile => \n ${e.stack}`);
     return res.status(500).send('An error occurred. Please try again later.');

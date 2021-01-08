@@ -8,8 +8,10 @@ const User = new Schema({
   firstName: String,
   lastName: String,
   dob: String,
-  ins_provider: String,
-  ins_id: String,
+  insurance: {
+    provider: String,
+    id: String,
+  },
   phone: String,
   address: {
     street: String,
