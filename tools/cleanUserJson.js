@@ -1,7 +1,6 @@
 const cleanUserJson = (unclean) => {
-  console.log('unclean: ', unclean);
   const user = {
-    email: unclean.email,
+    email: unclean.email || '',
     firstName: unclean.firstName || '',
     lastName: unclean.lastName || '',
     dob: unclean.dob || '',
@@ -12,7 +11,6 @@ const cleanUserJson = (unclean) => {
     emergency_contact: unclean.emergency_contact || {},
     travel: unclean.travel || [],
   };
-  console.log('clean: ', user);
   return user;
 };
 
