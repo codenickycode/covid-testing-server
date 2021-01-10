@@ -9,34 +9,34 @@ const User = require('../../../models/User.model.js');
 const updateProfile = async (req, res) => {
   try {
     const client = req.user._id;
-    const type = req.params.type;
+    const field = req.params.field;
     // parse request, include only values to be updated
     let dirtyReq = createTruthyObject(req.body);
     let request = sanitize(dirtyReq);
     let dbClient = await User.findById(client);
     if (!dbClient) throw new Error('Client not found');
-    switch (type) {
+    switch (field) {
       case 'name':
       case 'phone':
       case 'email':
       case 'dob':
+      case 'insurance':
+      case 'emergency_contact':
+      case 'address':
       case 'basic':
         if (request.email) {
           const registered = await User.findOne({
-            email: request.email,
+            email: { email: request.email },
           }).exec();
           if (registered)
             return res.status(400).send('Email address unavailable.');
         }
         for (let [key, val] of Object.entries(request)) {
-          if (val) dbClient[key] = val;
+          if (val) dbClient[field][key] = val;
         }
         break;
-      case 'insurance':
-      case 'emergency_contact':
-      case 'address':
-        dbClient[type] = Object.assign({}, dbClient[type], request);
-        break;
+      // dbClient[field] = Object.assign({}, dbClient[field], request);
+      // break;
       case 'password':
         const currentPassword = request.currentPassword;
         const newPassword = request.newPassword;
@@ -51,7 +51,7 @@ const updateProfile = async (req, res) => {
         dbClient.travel = [request, ...dbClient.travel];
         break;
       default:
-        throw new Error('Invalid update type');
+        throw new Error('Invalid update field');
     }
     const dirtyClient = await dbClient.save();
     const cleanClient = cleanUserJson(dirtyClient);

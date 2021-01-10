@@ -36,7 +36,7 @@ router
   .delete(ensureAuthenticated, reqs.deleteAppointment);
 
 // update user profile
-router.route('/update/:type').post(ensureAuthenticated, reqs.updateProfile);
+router.route('/update/:field').post(ensureAuthenticated, reqs.updateProfile);
 
 // get user document
 router.route('/').get(ensureAuthenticated, reqs.getClient);

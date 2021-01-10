@@ -11,10 +11,10 @@ const registerUser = async (req, res) => {
     const { role, email, password } = request;
     if (!validPassword(password))
       return res.status(400).send('Invalid password.');
-    const registered = await User.findOne({ email }).exec();
+    const registered = await User.findOne({ email: { email } }).exec();
     if (registered) return res.status(400).send('User already registered.');
     const hash = bcrypt.hashSync(password, 12);
-    const newUser = new User({ role, email, password: hash });
+    const newUser = new User({ role, email: { email }, password: hash });
     const dbUser = await newUser.save();
     req.login(dbUser, (e) => {
       if (e) throw e;

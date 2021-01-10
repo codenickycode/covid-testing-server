@@ -10,7 +10,7 @@ module.exports = () => {
   passport.use(
     'local',
     new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
-      User.findOne({ email }, (e, user) => {
+      User.findOne({ email: { email } }, (e, user) => {
         if (e) {
           logger.error(`auth.js Passport Local => ${e.stack}`);
           return done(e);
