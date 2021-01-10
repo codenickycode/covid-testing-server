@@ -19,7 +19,7 @@ const User = new Schema({
     street: { type: String, default: '' },
     city: { type: String, default: '' },
     state: { type: String, default: '' },
-    zip: { type: Number, default: '' },
+    zip: { type: String, default: '' },
   },
   emergency_contact: {
     name: { type: String, default: '' },

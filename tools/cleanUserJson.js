@@ -1,9 +1,17 @@
 const cleanUserJson = (unclean) => {
   const user = {
     email: unclean.email,
+    password: {
+      currentPassword: '',
+      newPassword: '',
+      confirmNewPassword: '',
+    },
     name: unclean.name,
     dob: unclean.dob,
-    insurance: unclean.insurance,
+    insurance: {
+      provider: unclean.insurance.provider,
+      id: '',
+    },
     phone: unclean.phone,
     address: unclean.address,
     emergency_contact: unclean.emergency_contact,
