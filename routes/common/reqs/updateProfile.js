@@ -23,7 +23,6 @@ const updateProfile = async (req, res) => {
       case 'insurance':
       case 'emergency_contact':
       case 'address':
-      case 'basic':
         if (request.email) {
           const registered = await User.findOne({
             email: { email: request.email },
@@ -35,8 +34,13 @@ const updateProfile = async (req, res) => {
           if (val) dbClient[field][key] = val;
         }
         break;
-      // dbClient[field] = Object.assign({}, dbClient[field], request);
-      // break;
+      case 'basic':
+        for (let [field, keyVal] of Object.entries(request)) {
+          for (let [key, val] of Object.entries(keyVal)) {
+            if (val) dbClient[field][key] = val;
+          }
+        }
+        break;
       case 'password':
         const currentPassword = request.currentPassword;
         const newPassword = request.newPassword;
