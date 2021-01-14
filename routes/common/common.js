@@ -9,6 +9,7 @@ const cleanUserJson = require('../../tools/cleanUserJson.js');
 router
   .route('/login')
   .post(passport.authenticate('local'), (req, res, next) => {
+    req.session.user = req.user;
     const response = cleanUserJson(req.user);
     res.status(200).json(response);
   });

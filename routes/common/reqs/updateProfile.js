@@ -59,6 +59,7 @@ const updateProfile = async (req, res) => {
     }
     const dirtyClient = await dbClient.save();
     const cleanClient = cleanUserJson(dirtyClient);
+    req.session.user = cleanClient;
     return res.status(200).json(cleanClient);
   } catch (e) {
     logger.error(`updateProfile => \n ${e.stack}`);
