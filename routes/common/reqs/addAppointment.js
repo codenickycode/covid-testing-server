@@ -2,6 +2,7 @@ const { ObjectId } = require('mongodb');
 const { logger } = require('../../../logger');
 const Appointment = require('../../../models/Appointment.model.js');
 const Location = require('../../../models/Location.model.js');
+const User = require('../../../models/User.model.js');
 
 const addAppointment = async (req, res) => {
   try {
@@ -16,15 +17,31 @@ const addAppointment = async (req, res) => {
       _id,
       date,
       time,
-      location,
+      location: location._id,
       client: req.user._id,
       tests,
     });
     await newAppointment.save();
-    const dbLocation = await Location.findById(location).exec();
+    const dbLocation = await Location.findById(location._id).exec();
     dbLocation.appointments.push({ _id, date, time });
     await dbLocation.save();
-    return res.status(200).send(`Added appointment ${_id}`);
+    const dbUser = await User.findById(req.user._id).exec();
+    dbUser.appointments.push({
+      _id,
+      date,
+      time,
+      location: {
+        name: location.name,
+        phone: location.phone,
+        address: location.address,
+      },
+      tests,
+    });
+    const updatedDbUser = await dbUser.save();
+    return res.status(200).json({
+      appointments: updatedDbUser.appointments,
+      confirmation: 'Successfully booked appointment!',
+    });
   } catch (e) {
     logger.error(`addAppointment => \n ${e.stack}`);
     return res.status(500).send('An error occurred. Please try again later.');

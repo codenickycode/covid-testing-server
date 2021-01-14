@@ -16,6 +16,7 @@ const cleanUserJson = (unclean) => {
     address: unclean.address,
     emergency_contact: unclean.emergency_contact,
     travel: unclean.travel,
+    appointments: unclean.appointments,
   };
   return user;
 };

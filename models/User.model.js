@@ -1,5 +1,23 @@
+const { ObjectID } = require('mongodb');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+
+const Appointment = new Schema({
+  _id: ObjectID,
+  date: String,
+  time: String,
+  location: {
+    name: String,
+    phone: String,
+    address: {
+      street: String,
+      city: String,
+      state: String,
+      zip: Number,
+    },
+  },
+  tests: [String],
+});
 
 const User = new Schema({
   role: { type: String, default: 'client' },
@@ -27,6 +45,7 @@ const User = new Schema({
     relation: { type: String, default: '' },
   },
   travel: [],
+  appointments: [Appointment],
 });
 
 module.exports = mongoose.model('user', User);
