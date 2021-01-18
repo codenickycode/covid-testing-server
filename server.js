@@ -45,15 +45,15 @@ mongoose
 // morgan-body req and res logging
 morganBody(app, morganOptions);
 
+// rate limiting
+app.set('trust proxy', 1);
+app.use(limiter);
+
 // routes
 const commonRouter = require('./routes/common/common.js');
 app.use('/common', commonRouter);
 const providerRouter = require('./routes/provider/provider.js');
 app.use('/provider', providerRouter);
-
-// rate limiting
-app.set('trust proxy', 1);
-app.use(limiter);
 
 // catch-all remaining errors
 app.use((e, req, res, next) => {

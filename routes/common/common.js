@@ -40,7 +40,7 @@ router
 router.route('/update/:field').post(ensureAuthenticated, reqs.updateProfile);
 
 // get user document
-router.route('/').get(ensureAuthenticated, reqs.getClient);
+router.route('/user').get(ensureAuthenticated, reqs.getClient);
 
 // catch all invalid endpoints
 router.use((req, res, next) => {
