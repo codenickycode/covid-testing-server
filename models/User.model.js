@@ -21,7 +21,7 @@ const Appointment = new Schema({
 
 const User = new Schema({
   role: { type: String, default: 'client' },
-  email: { email: { type: String, default: '' } },
+  email: { email: { type: String, default: '', unique: true, required: true } },
   password: String,
   name: {
     firstName: { type: String, default: '' },
@@ -46,6 +46,11 @@ const User = new Schema({
   },
   travel: [],
   appointments: [Appointment],
+  preferences: {
+    dark: { type: Boolean, default: false },
+    remember: { type: Boolean, default: true },
+    notifications: { type: Boolean, default: true },
+  },
 });
 
 module.exports = mongoose.model('user', User);

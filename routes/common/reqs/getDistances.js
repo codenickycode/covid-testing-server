@@ -13,7 +13,7 @@ const getDistances = async (req, res) => {
     locations.forEach((location, i) => {
       location.distance = distances[i].distance.value;
     });
-    req.session.locations = locations;
+    // req.session.locations = locations;
     return res.status(200).json(locations);
   } catch (e) {
     logger.error(`/locations => \n ${e.stack}`);

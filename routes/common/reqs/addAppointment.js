@@ -38,7 +38,7 @@ const addAppointment = async (req, res) => {
       tests,
     });
     const updatedDbUser = await dbUser.save();
-    req.session.user.appointments = updatedDbUser.appointments;
+    // req.session.user.appointments = updatedDbUser.appointments;
     return res.status(200).json({
       appointments: updatedDbUser.appointments,
       confirmation: 'Successfully booked appointment!',

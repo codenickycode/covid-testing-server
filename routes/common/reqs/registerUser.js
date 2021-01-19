@@ -19,7 +19,7 @@ const registerUser = async (req, res) => {
     req.login(dbUser, (e) => {
       if (e) throw e;
       const response = cleanUserJson(dbUser);
-      req.session.user = response;
+      // req.session.user = response;
       return res.status(200).json(response);
     });
   } catch (e) {

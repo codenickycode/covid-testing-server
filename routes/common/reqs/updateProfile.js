@@ -6,6 +6,12 @@ const validPassword = require('../../../tools/validPassword');
 const cleanUserJson = require('../../../tools/cleanUserJson.js');
 const User = require('../../../models/User.model.js');
 
+function updateFields(request, field, dbClient) {
+  for (let [key, val] of Object.entries(request)) {
+    if (val) dbClient[field][key] = val;
+  }
+}
+
 const updateProfile = async (req, res) => {
   try {
     const client = req.user._id;
@@ -30,15 +36,11 @@ const updateProfile = async (req, res) => {
           if (registered)
             return res.status(400).send('Email address unavailable.');
         }
-        for (let [key, val] of Object.entries(request)) {
-          if (val) dbClient[field][key] = val;
-        }
+        updateFields(request, field, dbClient);
         break;
       case 'basic':
         for (let [field, keyVal] of Object.entries(request)) {
-          for (let [key, val] of Object.entries(keyVal)) {
-            if (val) dbClient[field][key] = val;
-          }
+          updateFields(keyVal, field, dbClient);
         }
         break;
       case 'password':
@@ -54,12 +56,18 @@ const updateProfile = async (req, res) => {
       case 'travel':
         dbClient.travel = [request, ...dbClient.travel];
         break;
+      case 'preferences':
+        req.session.cookie.maxAge = req.body.remember
+          ? 1000 * 60 * 60 * 24 * 365
+          : 1000 * 60 * 5;
+        dbClient.preferences = req.body;
+        break;
       default:
         throw new Error('Invalid update field');
     }
     const dirtyClient = await dbClient.save();
     const cleanClient = cleanUserJson(dirtyClient);
-    req.session.user = cleanClient;
+    // req.session.user = cleanClient;
     return res.status(200).json(cleanClient);
   } catch (e) {
     logger.error(`updateProfile => \n ${e.stack}`);
