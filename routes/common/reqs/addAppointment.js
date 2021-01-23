@@ -40,7 +40,7 @@ const addAppointment = async (req, res) => {
     const updatedDbUser = await dbUser.save();
     // req.session.user.appointments = updatedDbUser.appointments;
     return res.status(200).json({
-      appointments: updatedDbUser.appointments,
+      user: updatedDbUser,
       confirmation: 'Successfully booked appointment!',
     });
   } catch (e) {
