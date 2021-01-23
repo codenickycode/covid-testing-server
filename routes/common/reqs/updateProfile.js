@@ -1,6 +1,5 @@
 const { logger } = require('../../../logger');
 const bcrypt = require('bcrypt');
-const createTruthyObject = require('../../../tools/createTruthyObject.js');
 const sanitize = require('../../../tools/sanitize');
 const validPassword = require('../../../tools/validPassword');
 const cleanUserJson = require('../../../tools/cleanUserJson.js');
@@ -8,7 +7,7 @@ const User = require('../../../models/User.model.js');
 
 function updateFields(request, field, dbClient) {
   for (let [key, val] of Object.entries(request)) {
-    if (val) dbClient[field][key] = val;
+    dbClient[field][key] = val;
   }
 }
 
@@ -16,9 +15,7 @@ const updateProfile = async (req, res) => {
   try {
     const client = req.user._id;
     const field = req.params.field;
-    // parse request, include only values to be updated
-    let dirtyReq = createTruthyObject(req.body);
-    let request = sanitize(dirtyReq);
+    let request = sanitize(req.body);
     let dbClient = await User.findById(client);
     if (!dbClient) throw new Error('Client not found');
     switch (field) {
@@ -59,7 +56,7 @@ const updateProfile = async (req, res) => {
       case 'preferences':
         req.session.cookie.maxAge = req.body.remember
           ? 1000 * 60 * 60 * 24 * 365
-          : 1000;
+          : null;
         dbClient.preferences = req.body;
         break;
       default:
