@@ -48,8 +48,8 @@ const User = new Schema({
   appointments: [Appointment],
   preferences: {
     dark: { type: Boolean, default: false },
-    remember: { type: Boolean, default: true },
-    notifications: { type: Boolean, default: true },
+    remember: { type: Boolean, default: false },
+    notifications: { type: Boolean, default: false },
   },
 });
 

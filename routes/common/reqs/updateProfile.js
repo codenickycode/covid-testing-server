@@ -59,7 +59,7 @@ const updateProfile = async (req, res) => {
       case 'preferences':
         req.session.cookie.maxAge = req.body.remember
           ? 1000 * 60 * 60 * 24 * 365
-          : 1000 * 60 * 5;
+          : 1000;
         dbClient.preferences = req.body;
         break;
       default:
@@ -67,7 +67,6 @@ const updateProfile = async (req, res) => {
     }
     const dirtyClient = await dbClient.save();
     const cleanClient = cleanUserJson(dirtyClient);
-    // req.session.user = cleanClient;
     return res.status(200).json(cleanClient);
   } catch (e) {
     logger.error(`updateProfile => \n ${e.stack}`);
