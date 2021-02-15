@@ -6,3 +6,4 @@ exports.updateProfile = require('./updateProfile.js');
 exports.getClient = require('./getClient');
 exports.getLocations = require('./getLocations.js');
 exports.getDistances = require('./getDistances.js');
+exports.forgotPassword = require('./forgotPassword.js');

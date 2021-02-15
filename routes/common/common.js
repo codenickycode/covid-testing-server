@@ -39,6 +39,9 @@ router
 // update user profile
 router.route('/update/:field').post(ensureAuthenticated, reqs.updateProfile);
 
+// reset user password
+router.route('/forgot').post(reqs.forgotPassword);
+
 // get user document
 router.route('/user').get(ensureAuthenticated, reqs.getClient);
 

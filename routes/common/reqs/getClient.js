@@ -9,7 +9,7 @@ const getClient = (req, res) => {
       res.status(200).json(cleanClient);
     })
     .catch((e) => {
-      logger.error(`/locations => \n ${e.stack}`);
+      logger.error(`/user => \n ${e.stack}`);
       return res.status(500).send('An error occurred. Please try again later.');
     });
 };
