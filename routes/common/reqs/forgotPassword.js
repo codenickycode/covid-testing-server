@@ -10,7 +10,8 @@ const forgotPassword = async (req, res) => {
     let dbClient = await User.findOne({
       email: { email },
     }).exec();
-    const password = Math.random().toString(36).substr(2, 8);
+    let password = Math.random().toString(36).substr(2, 8);
+    password += 'cT1';
     console.log(password);
     const hash = bcrypt.hashSync(password, 12);
     dbClient.password = hash;
