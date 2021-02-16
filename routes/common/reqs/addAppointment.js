@@ -3,6 +3,7 @@ const { logger } = require('../../../logger');
 const Appointment = require('../../../models/Appointment.model.js');
 const Location = require('../../../models/Location.model.js');
 const User = require('../../../models/User.model.js');
+const cleanUserJson = require('../../../tools/cleanUserJson');
 
 const addAppointment = async (req, res) => {
   try {
@@ -38,9 +39,9 @@ const addAppointment = async (req, res) => {
       tests,
     });
     const updatedDbUser = await dbUser.save();
-    // req.session.user.appointments = updatedDbUser.appointments;
+    const cleanUser = cleanUserJson(updatedDbUser);
     return res.status(200).json({
-      user: updatedDbUser,
+      user: cleanUser,
       confirmation: 'Successfully booked appointment!',
     });
   } catch (e) {
