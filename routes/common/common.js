@@ -9,7 +9,6 @@ const cleanUserJson = require('../../tools/cleanUserJson.js');
 router
   .route('/login')
   .post(passport.authenticate('local'), (req, res, next) => {
-    // req.session.user = req.user;
     const response = cleanUserJson(req.user);
     res.status(200).json(response);
   });
@@ -26,8 +25,8 @@ router.route('/locations').get(reqs.getLocations);
 // add distance from origin to all locations
 router.route('/distances').post(reqs.getDistances);
 
-// register new user *** add regLimter back to middleware
-router.route('/register').post(reqs.registerUser);
+// register new user
+router.route('/register').post(regLimiter, reqs.registerUser);
 
 // get, add, and delete user appointments
 router

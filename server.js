@@ -14,8 +14,7 @@ const { limiter } = require('./rateLimiter');
 
 // connect to db
 mongoose
-  //process.env.DB_URI
-  .connect('mongodb://localhost:27017', {
+  .connect(process.env.DB_URI, {
     useUnifiedTopology: true, // fix deprecated mongo stuff
     useNewUrlParser: true,
     useCreateIndex: true,

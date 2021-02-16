@@ -1,14 +1,17 @@
 {
-  "name": "server",
+  "name": "covid_test_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "API for covid-19 test appointment app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Nick Carbone <codenickycode@gmail.com> (http://codenickycode.com)",
   "license": "ISC",
+  "engines": {
+    "node": "12.19.x"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "bcrypt": "^5.0.0",
