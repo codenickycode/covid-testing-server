@@ -33,7 +33,6 @@ app.use(
     credentials: true,
     origin: true,
     allowHeaders: '*',
-    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   })
 );
