@@ -30,7 +30,7 @@ const app = express();
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(
   cors({
-    credentials: true,
+    // credentials: true,
     origin: true,
   })
 );
