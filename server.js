@@ -30,8 +30,8 @@ const app = express();
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(
   cors({
-    // credentials: true,
-    origin: true,
+    credentials: true,
+    origin: 'https://covid-testing.netlify.app',
   })
 );
 app.use(express.json({ limit: '1mb' }));
