@@ -32,8 +32,6 @@ app.use(
   cors({
     credentials: true,
     origin: true,
-    allowHeaders: '*',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   })
 );
 app.use(express.json({ limit: '1mb' }));
