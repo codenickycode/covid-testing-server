@@ -31,7 +31,7 @@ app.use(helmet({ contentSecurityPolicy: false }));
 app.use(
   cors({
     credentials: true,
-    origin: 'https://covid-testing.netlify.app',
+    origin: process.env.ORIGIN || 'http://localhost:3000',
   })
 );
 app.use(express.json({ limit: '1mb' }));
