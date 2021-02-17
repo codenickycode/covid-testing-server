@@ -31,7 +31,7 @@ app.use(helmet({ contentSecurityPolicy: false }));
 app.use(
   cors({
     credentials: true,
-    origin: '*',
+    origin: true,
   })
 );
 app.use(express.json({ limit: '1mb' }));
