@@ -11,7 +11,6 @@ const auth = require('./auth.js');
 const { logger, morganOptions } = require('./logger.js');
 const morganBody = require('morgan-body');
 const { limiter } = require('./rateLimiter');
-const path = require('path');
 
 // connect to db
 mongoose
@@ -58,14 +57,6 @@ const commonRouter = require('./routes/common/common.js');
 app.use('/common', commonRouter);
 const providerRouter = require('./routes/provider/provider.js');
 app.use('/provider', providerRouter);
-
-// serve frontend
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/build'));
-  app.set('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
 
 // catch-all remaining errors
 app.use((e, req, res, next) => {
