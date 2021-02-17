@@ -48,8 +48,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use((req, res, next) => res.status(401).send('sorry'));
-
 // morgan-body req and res logging
 morganBody(app, morganOptions);
 
