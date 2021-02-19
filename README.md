@@ -1,4 +1,5 @@
 # Covid Testing Appointments API
+https://covid-testing.netlify.app
 
 Engineer: Nick Carbone | drumnickydrum@gmail.com
 
@@ -15,4 +16,4 @@ This is the api for a MERN-stack prototype that will allow users to quickly and 
 - View upcoming and past appointments
 - Adjust personal app settings
 
-For the frontend, visit https://covid-testing.netlify.app
+For the frontend, visit https://github.com/drumnickydrum/covid-testing-frontend
